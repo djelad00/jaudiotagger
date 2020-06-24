@@ -116,6 +116,7 @@ Summarise Changes
 #309:Tag edition fails for m4a file - and corrupts tag
 #308:corrupt audio files after fix
 #316:NullPointerException at org.jaudiotagger.tag.mp4.field.Mp4GenreField
+#317:VorbisComment:ArrayIndexOutOfBoundsException: arraycopy
 
 2.2.5
 #033:Added getAudioStartPos() and getAudioEndPos() methods to AudioHeader interface and implemented for most formats
