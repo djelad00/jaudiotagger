@@ -72,10 +72,18 @@ public class MetadataBlockDataPicture implements MetadataBlockData, TagField
 
         //MimeType
         mimeTypeSize = rawdata.getInt();
+        if(mimeTypeSize < 0)
+        {
+            throw new InvalidFrameException("PictureType mimeType size was invalid:" + mimeTypeSize);
+        }
         mimeType = getString(rawdata, mimeTypeSize, StandardCharsets.ISO_8859_1.name());
 
         //Description
         descriptionSize = rawdata.getInt();
+        if(descriptionSize < 0)
+        {
+            throw new InvalidFrameException("PictureType descriptionSize size was invalid:" + mimeTypeSize);
+        }
         description = getString(rawdata, descriptionSize, StandardCharsets.UTF_8.name());
 
         //Image width
@@ -91,10 +99,14 @@ public class MetadataBlockDataPicture implements MetadataBlockData, TagField
         indexedColouredCount = rawdata.getInt();
 
         lengthOfPictureInBytes =  rawdata.getInt();
+
         //ImageData
+        if(lengthOfPictureInBytes > rawdata.remaining())
+        {
+            throw new InvalidFrameException("PictureType Size was:" + lengthOfPictureInBytes + " but remaining bytes size " +rawdata.remaining());
+        }
         imageData = new byte[lengthOfPictureInBytes];
         rawdata.get(imageData);
-
         logger.config("Read image:" + this.toString());
     }
 
@@ -118,7 +130,6 @@ public class MetadataBlockDataPicture implements MetadataBlockData, TagField
      * @throws java.io.IOException
      * @throws org.jaudiotagger.tag.InvalidFrameException
      */
-    //TODO check for buffer underflows see http://research.eeye.com/html/advisories/published/AD20071115.html
     public MetadataBlockDataPicture(MetadataBlockHeader header, FileChannel fc ) throws IOException, InvalidFrameException
     {
         ByteBuffer rawdata = ByteBuffer.allocate(header.getDataLength());

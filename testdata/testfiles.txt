@@ -135,3 +135,4 @@ test309.m4a, no, 309: Tag edition fails for m4a file - and corrupts tag
 test308.mp3, no, 308: setId3v2PaddingWillShorten failing
 test613.m4a, no, 316: genre field set as text not number
 test317.flac, no, 317: vorbiscomment arraycopy
+test540.flac, no, 318: Flac, handle image pictures where the data length is greater than recorded in header
