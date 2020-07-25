@@ -122,7 +122,7 @@ public class WavTagReader
         }
 
         String id = chunkHeader.getID();
-        logger.config(loggingName + " Reading Chunk:" + id + ":starting at:" + Hex.asDecAndHex(chunkHeader.getStartLocationInFile()) + ":sizeIncHeader:" + (chunkHeader.getSize() + ChunkHeader.CHUNK_HEADER_SIZE));
+        logger.severe(loggingName + " Reading Chunk:" + id + ":starting at:" + Hex.asDecAndHex(chunkHeader.getStartLocationInFile()) + ":sizeIncHeader:" + (chunkHeader.getSize() + ChunkHeader.CHUNK_HEADER_SIZE));
         final WavChunkType chunkType = WavChunkType.get(id);
         if (chunkType != null)
         {
@@ -199,31 +199,33 @@ public class WavTagReader
                     }
                     break;
 
-                case CORRUPT_ID3_EARLY:
-                    logger.severe(loggingName + " Found Corrupt id3 chunk, starting at Odd Location:"+chunkHeader.getID()+":"+chunkHeader.getSize());
-                    if(tag.getInfoTag()==null && tag.getID3Tag() == null)
-                    {
-                        tag.setIncorrectlyAlignedTag(true);
-                    }
-                    fc.position(fc.position() - (ChunkHeader.CHUNK_HEADER_SIZE - 1));
-                    return true;
-
-                case CORRUPT_ID3_LATE:
-                    logger.severe(loggingName + " Found Corrupt id3 chunk, starting at Odd Location:"+chunkHeader.getID()+":"+chunkHeader.getSize());
-                    if(tag.getInfoTag()==null && tag.getID3Tag() == null)
-                    {
-                        tag.setIncorrectlyAlignedTag(true);
-                    }
-                    fc.position(fc.position() -  (ChunkHeader.CHUNK_HEADER_SIZE - 1));
-                    return true;
-
                 default:
                     tag.addChunkSummary(new ChunkSummary(chunkHeader.getID(), chunkHeader.getStartLocationInFile(), chunkHeader.getSize()));
                     fc.position(fc.position() + chunkHeader.getSize());
 
             }
         }
-        else if(id.substring(1,4).equals(WavCorruptChunkType.CORRUPT_LIST_EARLY.getCode()))
+        else if(id.substring(1,3).equals(WavCorruptChunkType.CORRUPT_ID3_EARLY.getCode()))
+        {
+            logger.severe(loggingName + " Found Corrupt id3 chunk, starting at Odd Location:"+chunkHeader.getID()+":"+chunkHeader.getSize());
+            if(tag.getInfoTag()==null && tag.getID3Tag() == null)
+            {
+                tag.setIncorrectlyAlignedTag(true);
+            }
+            fc.position(fc.position() - (ChunkHeader.CHUNK_HEADER_SIZE - 1));
+            return true;
+        }
+        else if(id.substring(0,3).equals(WavCorruptChunkType.CORRUPT_ID3_LATE.getCode()))
+        {
+            logger.severe(loggingName + " Found Corrupt id3 chunk, starting at Odd Location:"+chunkHeader.getID()+":"+chunkHeader.getSize());
+            if(tag.getInfoTag()==null && tag.getID3Tag() == null)
+            {
+                tag.setIncorrectlyAlignedTag(true);
+            }
+            fc.position(fc.position() -  (ChunkHeader.CHUNK_HEADER_SIZE + 1));
+            return true;
+        }
+        else if(id.substring(1,3).equals(WavCorruptChunkType.CORRUPT_LIST_EARLY.getCode()))
         {
             logger.severe(loggingName + " Found Corrupt LIST Chunk, starting at Odd Location:"+chunkHeader.getID()+":"+chunkHeader.getSize());
 

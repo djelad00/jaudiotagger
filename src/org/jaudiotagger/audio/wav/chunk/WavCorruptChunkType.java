@@ -7,6 +7,8 @@ package org.jaudiotagger.audio.wav.chunk;
  */
 public enum WavCorruptChunkType
 {
+    CORRUPT_ID3_EARLY("id3"),
+    CORRUPT_ID3_LATE("d3 "),
     CORRUPT_LIST_EARLY("LIS"),
     CORRUPT_LIST_LATE("IST"),
     ;

@@ -21,8 +21,6 @@ public enum WavChunkType
     IXML("iXML", "Location Sound Metadata"),
     BRDK("BRDK", "BRDK"),
     ID3_UPPERCASE("ID3 ", "Stores metadata in ID3 chunk, should be lowercase id"),
-    CORRUPT_ID3_LATE("d3 \u0000", "Stores metadata in ID3 chunk"),
-    CORRUPT_ID3_EARLY("\u0000id3", "Stores metadata in ID3 chunk");
     ;
 
     private static final Map<String, WavChunkType> CODE_TYPE_MAP = new HashMap<String, WavChunkType>();

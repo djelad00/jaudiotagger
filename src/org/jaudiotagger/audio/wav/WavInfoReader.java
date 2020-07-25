@@ -194,7 +194,7 @@ public class WavInfoReader
             }
         }
         //Alignment problem that we can workround by going back one and retrying
-        else if(id.substring(1,4).equals(WavCorruptChunkType.CORRUPT_LIST_EARLY.getCode()))
+        else if(id.substring(1,3).equals(WavCorruptChunkType.CORRUPT_LIST_EARLY.getCode()))
         {
             logger.severe(loggingName + " Found Corrupt LIST Chunk, starting at Odd Location:"+chunkHeader.getID()+":"+chunkHeader.getSize());
             fc.position(fc.position() -  (ChunkHeader.CHUNK_HEADER_SIZE - 1));
