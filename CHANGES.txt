@@ -117,6 +117,8 @@ Summarise Changes
 #308:corrupt audio files after fix
 #316:NullPointerException at org.jaudiotagger.tag.mp4.field.Mp4GenreField
 #317:VorbisComment:ArrayIndexOutOfBoundsException: arraycopy
+#318:Flac, handle image pictures where the data length is greater than recorded in header
+#320:Wav code for checking incorrectly aligned 'id3 ' chunks incorrectly assumes the following/precding byte will be null
 
 2.2.5
 #033:Added getAudioStartPos() and getAudioEndPos() methods to AudioHeader interface and implemented for most formats
