@@ -121,6 +121,7 @@ public enum ErrorMessage
     NO_AUDIO_HEADER_FOUND("No audio header found within {0}"),
     NOT_STANDARD_MP$_GENRE("This is not a standard genre value, use custom genre field instead"),
     FLAC_NO_BLOCKTYPE("Flac file has invalid block type {0}"),
+    EXTRA_DATA_AT_END_OF_MP4("{0} byte(s) of extra data found at the end of MP4 file")
     ;
 
 

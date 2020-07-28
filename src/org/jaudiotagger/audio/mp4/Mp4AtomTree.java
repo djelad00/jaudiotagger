@@ -119,7 +119,9 @@ public class Mp4AtomTree
 
             //Iterate though all the top level Nodes
             ByteBuffer headerBuffer = ByteBuffer.allocate(Mp4BoxHeader.HEADER_LENGTH);
-            while (fc.position() < fc.size())
+            // we need to have at least enough data in the file left
+            // to read a box header
+            while (fc.position() < fc.size() - Mp4BoxHeader.HEADER_LENGTH)
             {
                 Mp4BoxHeader boxHeader = new Mp4BoxHeader();
                 headerBuffer.clear();          
@@ -219,6 +221,10 @@ public class Mp4AtomTree
                 {
                     fc.position(fc.position() + boxHeader.getDataLength());
                 }
+            }
+            final long extraDataLength = fc.size() - fc.position();
+            if (extraDataLength != 0) {
+                logger.warning(ErrorMessage.EXTRA_DATA_AT_END_OF_MP4.getMsg(extraDataLength));
             }
             return dataTree;
         }
