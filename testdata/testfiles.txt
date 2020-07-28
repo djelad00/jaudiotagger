@@ -108,6 +108,7 @@ test162.wav,no,204,wav with invalid ending ID3 length
 test164.m4a,yes,216,64bit mdat data length
 test210.m4a,no,210,NPE when reading a file with MP4 boxes of field type "genre"
 test218.mp4,yes,218,Corrupt files that apears to have 64bit mdat data length, but doesnt really
+test247.m4a,no,247,Not able to save this m4a
 test508.ogg, yes,183, flac with  part of ogg header and ogg suffix
 test509.wma, yes,184, corrupt wma file
 test515.wav, no,227, 24bit wav filw with incorrect data lenght value in header
@@ -119,3 +120,20 @@ test520.m4a, no,227, qobuz 24bit wma file
 test521.aif, no,227, hdtracks 24bit aif file (trailing 4 bytes)
 test522.aif, no,227, hdtracks 96/24bit aif file (trailing 4 bytes)
 test523.wav, no,235, ripped with audio hijack, info before id3 at start of file
+test566.mp3, no, 276,mp3 id3v24 with dupliciate CHAP frames
+test537.flac, no, 282, flac from quobuz with multibyte chars in image description
+test600.flac, no,, flac from user seektable 2nd block
+test601.flac, no,, flac from user after songkong process seektable now 4th block, no longer plays in winamp, ok in vlc
+test602.wav,no,290,wav with INFO chunk as first chunk before data, and ID3 chunk as later tag after data
+test607.wav,no,297,wav with larger than 2gb of data
+test608.m4a,no,, recent mp4 from iTunes that seems to have invalid atom after mdat atom
+test609.wav,no,299, BufferUnderflowException on read
+test610.aid, no, 300: BufferUnderFlow reading odd sized comment chunk but missing extra byte
+test302a.mp3, yes, 302: Corrupt mp3 with invalid encoding bit set messing up frame size
+test303.mp3, yes, 303: java.lang.NullPointerException when reading a corrupted audio file
+test309.m4a, no, 309: Tag edition fails for m4a file - and corrupts tag
+test308.mp3, no, 308: setId3v2PaddingWillShorten failing
+test613.m4a, no, 316: genre field set as text not number
+test317.flac, no, 317: vorbiscomment arraycopy
+test540.flac, no, 318: Flac, handle image pictures where the data length is greater than recorded in header
+test541.wav, no, 320: Wav, with incorrectly aligned second id3 chunk

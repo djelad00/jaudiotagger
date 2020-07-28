@@ -21,7 +21,6 @@ import org.jaudiotagger.logging.ErrorMessage;
 import org.jaudiotagger.tag.*;
 import org.jaudiotagger.tag.datatype.DataTypes;
 import org.jaudiotagger.tag.datatype.Pair;
-import org.jaudiotagger.tag.datatype.PairedTextEncodedStringNullTerminated;
 import org.jaudiotagger.tag.id3.framebody.*;
 import org.jaudiotagger.tag.id3.valuepair.MusicianCredits;
 import org.jaudiotagger.tag.id3.valuepair.StandardIPLSKey;
@@ -1317,6 +1316,7 @@ public class ID3v24Tag extends AbstractID3v2Tag
             Artwork artwork = ArtworkFactory.getNew();
             artwork.setMimeType(coverArt.getMimeType());
             artwork.setPictureType(coverArt.getPictureType());
+            artwork.setDescription(coverArt.getDescription());
             if (coverArt.isImageUrl())
             {
                 artwork.setLinked(true);
@@ -1340,7 +1340,7 @@ public class ID3v24Tag extends AbstractID3v2Tag
             body.setObjectValue(DataTypes.OBJ_PICTURE_DATA, artwork.getBinaryData());
             body.setObjectValue(DataTypes.OBJ_PICTURE_TYPE, artwork.getPictureType());
             body.setObjectValue(DataTypes.OBJ_MIME_TYPE, artwork.getMimeType());
-            body.setObjectValue(DataTypes.OBJ_DESCRIPTION, "");
+            body.setObjectValue(DataTypes.OBJ_DESCRIPTION, artwork.getDescription());
             return frame;
         }
         else
@@ -1355,7 +1355,7 @@ public class ID3v24Tag extends AbstractID3v2Tag
             }
             body.setObjectValue(DataTypes.OBJ_PICTURE_TYPE, artwork.getPictureType());
             body.setObjectValue(DataTypes.OBJ_MIME_TYPE, FrameBodyAPIC.IMAGE_IS_URL);
-            body.setObjectValue(DataTypes.OBJ_DESCRIPTION, "");
+            body.setObjectValue(DataTypes.OBJ_DESCRIPTION, artwork.getDescription());
             return frame;
         }
     }

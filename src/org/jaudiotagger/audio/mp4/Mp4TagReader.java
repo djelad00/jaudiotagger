@@ -31,11 +31,12 @@ import org.jaudiotagger.tag.mp4.atom.Mp4DataBox;
 import org.jaudiotagger.tag.mp4.field.*;
 
 import java.io.IOException;
-import java.io.RandomAccessFile;
 import java.io.UnsupportedEncodingException;
 import java.nio.ByteBuffer;
-import java.nio.channels.FileChannel;
+import java.nio.channels.SeekableByteChannel;
 import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.logging.Logger;
 
 /**
@@ -83,9 +84,9 @@ public class Mp4TagReader
      * There are gaps between these boxes
 
      */
-    public Mp4Tag read(RandomAccessFile raf) throws CannotReadException, IOException
+    public Mp4Tag read(Path file) throws CannotReadException, IOException
     {
-        FileChannel fc = raf.getChannel();
+        SeekableByteChannel fc = Files.newByteChannel(file);
         Mp4Tag tag = new Mp4Tag();
 
         //Get to the facts everything we are interested in is within the moov box, so just load data from file
@@ -96,7 +97,7 @@ public class Mp4TagReader
             throw new CannotReadException(ErrorMessage.MP4_FILE_NOT_CONTAINER.getMsg());
         }
         ByteBuffer moovBuffer = ByteBuffer.allocate(moovHeader.getLength() - Mp4BoxHeader.HEADER_LENGTH);
-        raf.getChannel().read(moovBuffer);
+        fc.read(moovBuffer);
         moovBuffer.rewind();
 
         //Level 2-Searching for "udta" within "moov"

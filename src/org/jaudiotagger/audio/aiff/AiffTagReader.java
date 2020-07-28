@@ -1,7 +1,9 @@
 
 package org.jaudiotagger.audio.aiff;
 
-import org.jaudiotagger.audio.aiff.chunk.*;
+import org.jaudiotagger.audio.aiff.chunk.AiffChunkReader;
+import org.jaudiotagger.audio.aiff.chunk.AiffChunkType;
+import org.jaudiotagger.audio.aiff.chunk.ID3Chunk;
 import org.jaudiotagger.audio.exceptions.CannotReadException;
 import org.jaudiotagger.audio.iff.Chunk;
 import org.jaudiotagger.audio.iff.ChunkHeader;
@@ -64,7 +66,7 @@ public class AiffTagReader extends AiffChunkReader
             {
                 aiffTag.setID3Tag(AiffTag.createDefaultID3Tag());
             }
-            logger.severe("LastChunkPos:"+Hex.asDecAndHex(fc.position())
+            logger.config("LastChunkPos:"+Hex.asDecAndHex(fc.position())
                     +":OfficialEndLocation:"+Hex.asDecAndHex(endLocationOfAiffData));
             if(fc.position() > endLocationOfAiffData)
             {

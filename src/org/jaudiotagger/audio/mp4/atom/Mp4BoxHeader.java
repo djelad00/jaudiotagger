@@ -24,11 +24,10 @@ import org.jaudiotagger.audio.generic.Utils;
 import org.jaudiotagger.logging.ErrorMessage;
 
 import java.io.IOException;
-import java.io.RandomAccessFile;
 import java.io.UnsupportedEncodingException;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
-import java.nio.channels.FileChannel;
+import java.nio.channels.SeekableByteChannel;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 import java.util.logging.Logger;
@@ -42,7 +41,7 @@ import java.util.logging.Logger;
  * All boxes consist of a 4 byte box length (big Endian), and then a 4 byte identifier, this is the header
  * which is model in this class.
  *
- * The length includes the length of the box including the identifier and the length itself.
+ * The length includes the length of the box including the header itself.
  * Then they may contain data and/or sub boxes, if they contain subboxes they are known as a parent box. Parent boxes
  * shouldn't really contain data, but sometimes they do.
  *
@@ -267,7 +266,7 @@ public class Mp4BoxHeader
      * @throws java.io.IOException
      * @return
      */
-    public static Mp4BoxHeader seekWithinLevel(FileChannel fc, String id) throws IOException
+    public static Mp4BoxHeader seekWithinLevel(SeekableByteChannel fc, String id) throws IOException
     {
         logger.finer("Started searching for:" + id + " in file at:" + fc.position());
 

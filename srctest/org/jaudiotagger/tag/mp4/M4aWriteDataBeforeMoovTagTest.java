@@ -28,7 +28,7 @@ public class M4aWriteDataBeforeMoovTagTest extends TestCase
             File testFile = AbstractTestCase.copyAudioToTmp("test15.m4a", new File("testWriteWhenMDatAtStart1.m4a"));
 
             //First lets just createField tree
-            Mp4AtomTree atomTree = new Mp4AtomTree(new RandomAccessFile(testFile, "r"));
+            Mp4AtomTree atomTree = new Mp4AtomTree(testFile);
             atomTree.printAtomTree();
 
             //Now we try to make some changes
@@ -44,7 +44,7 @@ public class M4aWriteDataBeforeMoovTagTest extends TestCase
             System.out.println(tag);
 
             //See tree again
-            atomTree = new Mp4AtomTree(new RandomAccessFile(testFile, "r"));
+            atomTree = new Mp4AtomTree(testFile);
             atomTree.printAtomTree();
 
             //Ease of use methods for common fields
@@ -71,7 +71,7 @@ public class M4aWriteDataBeforeMoovTagTest extends TestCase
             File testFile = AbstractTestCase.copyAudioToTmp("test15.m4a", new File("testWriteWhenMDatAtStart2.m4a"));
 
             //First lets just createField tree
-            Mp4AtomTree atomTree = new Mp4AtomTree(new RandomAccessFile(testFile, "r"));
+            Mp4AtomTree atomTree = new Mp4AtomTree(testFile);
             atomTree.printAtomTree();
 
             //Now we try to make some changes
@@ -90,7 +90,7 @@ public class M4aWriteDataBeforeMoovTagTest extends TestCase
             System.out.println(tag);
 
             //See tree again
-            atomTree = new Mp4AtomTree(new RandomAccessFile(testFile, "r"));
+            atomTree =  new Mp4AtomTree(testFile);
             atomTree.printAtomTree();
 
             //Ease of use methods for common fields
@@ -118,7 +118,7 @@ public class M4aWriteDataBeforeMoovTagTest extends TestCase
             File testFile = AbstractTestCase.copyAudioToTmp("test15.m4a", new File("testWriteWhenMDatAtStart3.m4a"));
 
             //First lets just createField tree
-            Mp4AtomTree atomTree = new Mp4AtomTree(new RandomAccessFile(testFile, "r"));
+            Mp4AtomTree atomTree =  new Mp4AtomTree(testFile);
             atomTree.printAtomTree();
 
             //Now we try to make some changes
@@ -134,7 +134,7 @@ public class M4aWriteDataBeforeMoovTagTest extends TestCase
             System.out.println(tag);
 
             //See tree again
-            atomTree = new Mp4AtomTree(new RandomAccessFile(testFile, "r"));
+            atomTree =  new Mp4AtomTree(testFile);
             atomTree.printAtomTree();
 
             //Ease of use methods for common fields
@@ -164,7 +164,7 @@ public class M4aWriteDataBeforeMoovTagTest extends TestCase
             AudioFile f = AudioFileIO.read(testFile);
 
             //First lets just createField tree
-            Mp4AtomTree atomTree = new Mp4AtomTree(new RandomAccessFile(testFile, "r"));
+            Mp4AtomTree atomTree = new Mp4AtomTree(testFile);
             atomTree.printAtomTree();
 
             Tag tag = f.getTag();
@@ -196,7 +196,7 @@ public class M4aWriteDataBeforeMoovTagTest extends TestCase
             //Save changes and reread from disk
             f.commit();
 
-            atomTree = new Mp4AtomTree(new RandomAccessFile(testFile, "r"));
+            atomTree =  new Mp4AtomTree(testFile);
             atomTree.printAtomTree();
 
             f = AudioFileIO.read(testFile);
@@ -206,7 +206,7 @@ public class M4aWriteDataBeforeMoovTagTest extends TestCase
 
             //AudioInfo
             //Time in seconds
-            assertEquals(30, f.getAudioHeader().getTrackLength());
+            assertEquals(31, f.getAudioHeader().getTrackLength());
             assertEquals(44100, f.getAudioHeader().getSampleRateAsNumber());
 
             //Stereo thing doesnt work
@@ -294,7 +294,7 @@ public class M4aWriteDataBeforeMoovTagTest extends TestCase
 
             //AudioInfo
             //Time in seconds
-            assertEquals(30, f.getAudioHeader().getTrackLength());
+            assertEquals(31, f.getAudioHeader().getTrackLength());
             assertEquals(44100, f.getAudioHeader().getSampleRateAsNumber());
 
             //Stereo thing doesnt work
