@@ -49,7 +49,8 @@ public class DsfFileWriter extends AudioFileWriter2
                 if (dsd.getMetadataOffset() > 0)
                 {
                     fc.position(dsd.getMetadataOffset());
-                    if(((int)fc.size() - fc.position())>=DsfChunkType.ID3.getCode().length())
+                    //If room for an ID3 tag
+                    if((fc.size() - fc.position())>=DsfChunkType.ID3.getCode().length())
                     {
                         ID3Chunk id3Chunk = ID3Chunk.readChunk(Utils.readFileDataIntoBufferLE(fc, (int) (fc.size() - fc.position())));
                         if (id3Chunk != null)
@@ -68,9 +69,9 @@ public class DsfFileWriter extends AudioFileWriter2
                             throw new CannotWriteException(file + "Could not find existing ID3v2 Tag (1)");
                         }
                     }
+                    //Remove Existing nonetag (must be at/near end of file)
                     else
                     {
-                        //Remove Existing nonetag (must be at/near end of file)
                         fc.position(dsd.getMetadataOffset());
                         fc.truncate(fc.position());
                         final ByteBuffer bb = convert((AbstractID3v2Tag) tag);

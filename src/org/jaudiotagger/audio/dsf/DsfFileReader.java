@@ -94,7 +94,7 @@ public class DsfFileReader extends AudioFileReader2
         if(dsd.getMetadataOffset() > 0)
         {
             fc.position(dsd.getMetadataOffset());
-            if(((int)fc.size() - fc.position())>=DsfChunkType.ID3.getCode().length())
+            if((fc.size() - fc.position())>=DsfChunkType.ID3.getCode().length())
             {
                 ID3Chunk id3Chunk = ID3Chunk.readChunk(Utils.readFileDataIntoBufferLE(fc, (int) (fc.size() - fc.position())));
                 if (id3Chunk != null)

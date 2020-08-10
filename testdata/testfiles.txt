@@ -137,3 +137,4 @@ test613.m4a, no, 316: genre field set as text not number
 test317.flac, no, 317: vorbiscomment arraycopy
 test540.flac, no, 318: Flac, handle image pictures where the data length is greater than recorded in header
 test541.wav, no, 320: Wav, with incorrectly aligned second id3 chunk
+test322.dsf, no, 322: Problems writing metadata for DSF files larger than 2GB
