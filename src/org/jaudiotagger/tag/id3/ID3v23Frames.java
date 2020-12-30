@@ -388,6 +388,7 @@ public class ID3v23Frames extends ID3Frames
         tagFieldToId3.put(FieldKey.ALBUM_ARTISTS, ID3v23FieldKey.ALBUM_ARTISTS);
         tagFieldToId3.put(FieldKey.ALBUM_ARTISTS_SORT, ID3v23FieldKey.ALBUM_ARTISTS_SORT);
         tagFieldToId3.put(FieldKey.ALBUM_SORT, ID3v23FieldKey.ALBUM_SORT);
+        tagFieldToId3.put(FieldKey.ALBUM_YEAR, ID3v23FieldKey.ALBUM_YEAR);
         tagFieldToId3.put(FieldKey.AMAZON_ID, ID3v23FieldKey.AMAZON_ID);
         tagFieldToId3.put(FieldKey.ARRANGER, ID3v23FieldKey.ARRANGER);
         tagFieldToId3.put(FieldKey.ARRANGER_SORT, ID3v23FieldKey.ARRANGER_SORT);
@@ -486,6 +487,7 @@ public class ID3v23Frames extends ID3Frames
         tagFieldToId3.put(FieldKey.ORCHESTRA, ID3v23FieldKey.ORCHESTRA);
         tagFieldToId3.put(FieldKey.ORCHESTRA_SORT, ID3v23FieldKey.ORCHESTRA_SORT);
         tagFieldToId3.put(FieldKey.ORIGINAL_ALBUM, ID3v23FieldKey.ORIGINAL_ALBUM);
+        tagFieldToId3.put(FieldKey.ORIGINAL_ALBUM_YEAR, ID3v23FieldKey.ORIGINAL_ALBUM_YEAR);
         tagFieldToId3.put(FieldKey.ORIGINAL_ARTIST, ID3v23FieldKey.ORIGINAL_ARTIST);
         tagFieldToId3.put(FieldKey.ORIGINAL_LYRICIST, ID3v23FieldKey.ORIGINAL_LYRICIST);
         tagFieldToId3.put(FieldKey.ORIGINAL_YEAR, ID3v23FieldKey.ORIGINAL_YEAR);

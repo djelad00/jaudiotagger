@@ -95,6 +95,7 @@ public final class AsfTag extends AbstractTag
         tagFieldToAsfField.put(FieldKey.ALBUM_ARTISTS, AsfFieldKey.ALBUM_ARTISTS);
         tagFieldToAsfField.put(FieldKey.ALBUM_ARTISTS_SORT, AsfFieldKey.ALBUM_ARTISTS_SORT);
         tagFieldToAsfField.put(FieldKey.ALBUM_SORT, AsfFieldKey.ALBUM_SORT);
+        tagFieldToAsfField.put(FieldKey.ALBUM_YEAR, AsfFieldKey.ALBUM_YEAR);
         tagFieldToAsfField.put(FieldKey.AMAZON_ID, AsfFieldKey.AMAZON_ID);
         tagFieldToAsfField.put(FieldKey.ARRANGER, AsfFieldKey.ARRANGER);
         tagFieldToAsfField.put(FieldKey.ARRANGER_SORT, AsfFieldKey.ARRANGER_SORT);
@@ -209,6 +210,7 @@ public final class AsfTag extends AbstractTag
         tagFieldToAsfField.put(FieldKey.ORIGINAL_ARTIST, AsfFieldKey.ORIGINAL_ARTIST);
         tagFieldToAsfField.put(FieldKey.ORIGINAL_LYRICIST, AsfFieldKey.ORIGINAL_LYRICIST);
         tagFieldToAsfField.put(FieldKey.ORIGINAL_YEAR, AsfFieldKey.ORIGINAL_YEAR);
+        tagFieldToAsfField.put(FieldKey.ORIGINAL_ALBUM_YEAR, AsfFieldKey.ORIGINAL_ALBUM_YEAR);
         tagFieldToAsfField.put(FieldKey.OVERALL_WORK, AsfFieldKey.OVERALL_WORK);
         tagFieldToAsfField.put(FieldKey.PART, AsfFieldKey.PART);
         tagFieldToAsfField.put(FieldKey.PART_NUMBER, AsfFieldKey.PART_NUMBER);

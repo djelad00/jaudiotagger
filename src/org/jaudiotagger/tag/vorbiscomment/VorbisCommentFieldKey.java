@@ -28,6 +28,7 @@ public enum VorbisCommentFieldKey
     ALBUMARTIST_JRIVER("ALBUM ARTIST",EnumSet.of(Tagger.JRIVER)),
     ALBUMSORT("ALBUMSORT",EnumSet.of(Tagger.PICARD,Tagger.JAIKOZ)),
     ALBUM_ARTIST("ALBUM_ARTIST",EnumSet.of(Tagger.MEDIA_MONKEY)),
+    ALBUM_YEAR("ALBUM_YEAR",EnumSet.of(Tagger.JAIKOZ)),
     ARRANGER("ARRANGER",EnumSet.of(Tagger.PICARD)),
     ARRANGER_SORT("ARRANGER_SORT",EnumSet.of(Tagger.JAIKOZ)),
     ARTIST("ARTIST", EnumSet.of(Tagger.XIPH,Tagger.PICARD,Tagger.JAIKOZ)),
@@ -148,6 +149,7 @@ public enum VorbisCommentFieldKey
     ORCHESTRA_SORT("ORCHESTRA_SORT",EnumSet.of(Tagger.JAIKOZ)),
     ORGANIZATION("ORGANIZATION",EnumSet.of(Tagger.XIPH)),  //   Name of the organization producing the track (i.e. the 'record label')
     ORIGINAL_ALBUM("ORIGINAL ALBUM",EnumSet.of(Tagger.JAIKOZ,Tagger.MEDIA_MONKEY)),
+    ORIGINAL_ALBUM_YEAR("ORIGINAL_ALBUM_YEAR",EnumSet.of(Tagger.JAIKOZ)),
     ORIGINAL_ARTIST("ORIGINAL ARTIST",EnumSet.of(Tagger.JAIKOZ,Tagger.MEDIA_MONKEY)),
     ORIGINAL_LYRICIST("ORIGINAL LYRICIST",EnumSet.of(Tagger.MEDIA_MONKEY)),
     ORIGINAL_YEAR("ORIGINAL YEAR",EnumSet.of(Tagger.JAIKOZ,Tagger.MEDIA_MONKEY)),
