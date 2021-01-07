@@ -224,9 +224,15 @@ public final class AsfTag extends AbstractTag
         tagFieldToAsfField.put(FieldKey.RANKING, AsfFieldKey.RANKING);
         tagFieldToAsfField.put(FieldKey.RATING, AsfFieldKey.USER_RATING);
         tagFieldToAsfField.put(FieldKey.RECORD_LABEL, AsfFieldKey.RECORD_LABEL);
+        tagFieldToAsfField.put(FieldKey.RECORDINGDATE, AsfFieldKey.RECORDINGDATE);
+        tagFieldToAsfField.put(FieldKey.RECORDINGSTARTDATE, AsfFieldKey.RECORDINGSTARTDATE);
+        tagFieldToAsfField.put(FieldKey.RECORDINGENDDATE, AsfFieldKey.RECORDINGENDDATE);
+        tagFieldToAsfField.put(FieldKey.RECORDINGLOCATION, AsfFieldKey.RECORDINGLOCATION);
         tagFieldToAsfField.put(FieldKey.REMIXER, AsfFieldKey.REMIXER);
         tagFieldToAsfField.put(FieldKey.SCRIPT, AsfFieldKey.SCRIPT);
+        tagFieldToAsfField.put(FieldKey.SECTION, AsfFieldKey.SECTION);
         tagFieldToAsfField.put(FieldKey.SINGLE_DISC_TRACK_NO, AsfFieldKey.SINGLE_DISC_TRACK_NO);
+        tagFieldToAsfField.put(FieldKey.SONGKONG_ID, AsfFieldKey.SONGKONG_ID);
         tagFieldToAsfField.put(FieldKey.SUBTITLE, AsfFieldKey.SUBTITLE);
         tagFieldToAsfField.put(FieldKey.TAGS, AsfFieldKey.TAGS);
         tagFieldToAsfField.put(FieldKey.TEMPO, AsfFieldKey.TEMPO);

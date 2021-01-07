@@ -3,6 +3,7 @@ package org.jaudiotagger.tag.asf;
 import org.jaudiotagger.audio.asf.data.ContainerType;
 import org.jaudiotagger.audio.asf.data.ContentBranding;
 import org.jaudiotagger.audio.asf.data.ContentDescription;
+import org.jaudiotagger.tag.FieldKey;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -198,9 +199,15 @@ public enum AsfFieldKey
     QUALITY("Quality", true),
     RANKING("RANKING", true),
     RECORD_LABEL("WM/Publisher", false),
+    RECORDINGDATE("RECORDINGDATE", false),
+    RECORDINGSTARTDATE("RECORDINGSTARTDATE", false),
+    RECORDINGENDDATE("RECORDINGENDDATE", false),
+    RECORDINGLOCATION("RECORDINGLOCATION", false),
     REMIXER("WM/ModifiedBy", false),
     SCRIPT("WM/Script", false),
+    SECTION("SECTION", false),
     SINGLE_DISC_TRACK_NO("SINGLE_DISC_TRACK_NO",true),
+    SONGKONG_ID("SONGKONG_ID", false),
     SUBTITLE("WM/SubTitle", false),
     TAGS("WM/Tags", false),
     TEMPO("Tempo", true),

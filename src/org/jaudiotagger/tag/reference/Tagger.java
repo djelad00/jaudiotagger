@@ -24,6 +24,8 @@ public enum Tagger
     JRIVER(13,"JRiver"),
     GODFATHER(14,"The Godfather"),
     MUSICHI(15, "Musichi"),
+    ROON(16,"Roon"),
+    SONGKONG(17,"SongKong"),
     ;
 
     private int compatability;

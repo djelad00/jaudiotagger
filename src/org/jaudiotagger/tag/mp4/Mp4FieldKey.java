@@ -4,6 +4,8 @@ import org.jaudiotagger.tag.mp4.field.Mp4FieldType;
 import org.jaudiotagger.tag.mp4.field.Mp4TagReverseDnsField;
 import org.jaudiotagger.tag.reference.Tagger;
 
+import java.util.EnumSet;
+
 import static org.jaudiotagger.tag.mp4.field.Mp4FieldType.*;
 
 /**
@@ -202,14 +204,20 @@ public enum Mp4FieldKey
     QUALITY("qual",Mp4TagFieldSubType.TEXT, TEXT, Tagger.MEDIA_MONKEY),
     RANKING("com.apple.iTunes","RANKING",  TEXT, Tagger.JAIKOZ),
     RATING("rtng",Mp4TagFieldSubType.BYTE, INTEGER,1),   //AFAIK Cant be setField in itunes, but if setField to explicit itunes will show as explicit
+    RECORDINGDATE("com.apple.iTunes","RECORDINGDATE",  TEXT, Tagger.ROON),
+    RECORDINGSTARTDATE("com.apple.iTunes","RECORDINGSTARTDATE",  TEXT, Tagger.ROON),
+    RECORDINGENDDATE("com.apple.iTunes","RECORDINGENDDATE",  TEXT, Tagger.ROON),
+    RECORDINGLOCATION("com.apple.iTunes","RECORDINGLOCATION",  TEXT, Tagger.ROON),
     RELEASECOUNTRY("com.apple.iTunes", "MusicBrainz Album Release Country", TEXT, Tagger.PICARD),
     REMIXER("com.apple.iTunes", "REMIXER", TEXT, Tagger.PICARD),
     SCORE("rate",Mp4TagFieldSubType.TEXT, TEXT, Tagger.MEDIA_MONKEY),    //As in mark out of 100
     SCRIPT("com.apple.iTunes", "SCRIPT", TEXT, Tagger.JAIKOZ),
     SF_ID("sfID",Mp4TagFieldSubType.UNKNOWN, INTEGER, 4),
+    SECTION("com.apple.iTunes","SECTION",  TEXT, Tagger.ROON),
     SHOW("tvsh",Mp4TagFieldSubType.TEXT, TEXT),      //tv show but also used just as show
     SHOW_SORT("sosn",Mp4TagFieldSubType.TEXT, TEXT),
     SINGLE_DISC_TRACK_NO("com.apple.iTunes","SINGLE_DISC_TRACK_NO",  TEXT, Tagger.JAIKOZ),
+    SONGKONG_ID("com.apple.iTunes","SONGKONG_ID",  TEXT, Tagger.SONGKONG),
     SUBTITLE("com.apple.iTunes", "SUBTITLE", TEXT, Tagger.PICARD),
     TAGS("com.apple.iTunes", "TAGS", TEXT, Tagger.JAIKOZ),
     TEMPO("empo",Mp4TagFieldSubType.TEXT, TEXT, Tagger.MEDIA_MONKEY),

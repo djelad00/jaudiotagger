@@ -139,8 +139,14 @@ public class FrameBodyTXXX extends AbstractFrameBodyTextInfo implements ID3v24Fr
     public static final String PERFORMER_NAME_SORT                      = "PERFORMER_NAME_SORT";
     public static final String PERIOD                                   = "PERIOD";
     public static final String RANKING                                  = "RANKING";
+    public static final String RECORDINGDATE                            = "RECORDINGDATE";
+    public static final String RECORDINGSTARTDATE                       = "RECORDINGSTARTDATE";
+    public static final String RECORDINGENDDATE                         = "RECORDINGENDDATE";
+    public static final String RECORDINGLOCATION                        = "RECORDINGLOCATION";
     public static final String SCRIPT                                   = "SCRIPT";
+    public static final String SECTION                                  = "SECTION";
     public static final String SINGLE_DISC_TRACK_NO                     = "SINGLE_DISC_TRACK_NO";
+    public static final String SONGKONG_ID                              = "SONGKONG_ID";
     public static final String TAGS                                     = "TAGS";
     public static final String TIMBRE                                   = "TIMBRE_BRIGHTNESS";
     public static final String TITLE_MOVEMENT                           = "TITLE_MOVEMENT";

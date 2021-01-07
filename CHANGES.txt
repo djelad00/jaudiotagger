@@ -121,6 +121,7 @@ Summarise Changes
 #320:Wav code for checking incorrectly aligned 'id3 ' chunks incorrectly assumes the following/precding byte will be null
 #321:Ensure that when reading an mp4 box header, we have at least enough data in the file to actually read the header, if there is less data, ignore it and log a warning.
 #322:Problems writing metadata for DSF files larger than 2GB
+#329:Add support for Roon fields (and also SONGKONG_ID for SongKong)
 
 2.2.5
 #033:Added getAudioStartPos() and getAudioEndPos() methods to AudioHeader interface and implemented for most formats

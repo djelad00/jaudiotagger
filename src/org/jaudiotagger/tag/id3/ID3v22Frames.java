@@ -447,9 +447,15 @@ public class ID3v22Frames extends ID3Frames
         tagFieldToId3.put(FieldKey.RANKING, ID3v22FieldKey.RANKING);
         tagFieldToId3.put(FieldKey.RATING, ID3v22FieldKey.RATING);
         tagFieldToId3.put(FieldKey.RECORD_LABEL, ID3v22FieldKey.RECORD_LABEL);
+        tagFieldToId3.put(FieldKey.RECORDINGDATE, ID3v22FieldKey.RECORDINGDATE);
+        tagFieldToId3.put(FieldKey.RECORDINGSTARTDATE, ID3v22FieldKey.RECORDINGSTARTDATE);
+        tagFieldToId3.put(FieldKey.RECORDINGENDDATE, ID3v22FieldKey.RECORDINGENDDATE);
+        tagFieldToId3.put(FieldKey.RECORDINGLOCATION, ID3v22FieldKey.RECORDINGLOCATION);
         tagFieldToId3.put(FieldKey.REMIXER, ID3v22FieldKey.REMIXER);
         tagFieldToId3.put(FieldKey.SCRIPT, ID3v22FieldKey.SCRIPT);
+        tagFieldToId3.put(FieldKey.SECTION, ID3v22FieldKey.SECTION);
         tagFieldToId3.put(FieldKey.SINGLE_DISC_TRACK_NO, ID3v22FieldKey.SINGLE_DISC_TRACK_NO);
+        tagFieldToId3.put(FieldKey.SONGKONG_ID, ID3v22FieldKey.SONGKONG_ID);
         tagFieldToId3.put(FieldKey.SUBTITLE, ID3v22FieldKey.SUBTITLE);
         tagFieldToId3.put(FieldKey.TAGS, ID3v22FieldKey.TAGS);
         tagFieldToId3.put(FieldKey.TEMPO, ID3v22FieldKey.TEMPO);
