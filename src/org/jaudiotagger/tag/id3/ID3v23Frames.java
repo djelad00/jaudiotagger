@@ -430,7 +430,7 @@ public class ID3v23Frames extends ID3Frames
         tagFieldToId3.put(FieldKey.GROUP, ID3v23FieldKey.GROUP);
         tagFieldToId3.put(FieldKey.GROUPING, ID3v23FieldKey.GROUPING);
         tagFieldToId3.put(FieldKey.INSTRUMENT, ID3v23FieldKey.INSTRUMENT);
-        tagFieldToId3.put(FieldKey.INVOLVED_PERSON, ID3v23FieldKey.INVOLVED_PERSON);
+        tagFieldToId3.put(FieldKey.INVOLVEDPEOPLE, ID3v23FieldKey.INVOLVEDPEOPLE);
         tagFieldToId3.put(FieldKey.IPI, ID3v23FieldKey.IPI);
         tagFieldToId3.put(FieldKey.ISRC, ID3v23FieldKey.ISRC);
         tagFieldToId3.put(FieldKey.ISWC, ID3v23FieldKey.ISWC);

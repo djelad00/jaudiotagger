@@ -2146,7 +2146,18 @@ public abstract class AbstractID3v2Tag extends AbstractID3Tag implements Tag
         }
         else if (frame.getBody() instanceof FrameBodyTIPL)
         {
-            ((FrameBodyTIPL) (frame.getBody())).addPair(formatKey.getSubId(), value);
+            if(formatKey.getSubId()!=null)
+            {
+                ((FrameBodyTIPL) (frame.getBody())).addPair(formatKey.getSubId(), value);
+            }
+            else if(values.length>=2)
+            {
+                ((FrameBodyTIPL) (frame.getBody())).addPair(values[0], values[1]);
+            }
+            else
+            {
+                ((FrameBodyTIPL) (frame.getBody())).addPair(values[0]);
+            }
         }
         else if (frame.getBody() instanceof FrameBodyTMCL)
         {
@@ -2244,7 +2255,7 @@ public abstract class AbstractID3v2Tag extends AbstractID3Tag implements Tag
         }
         //Special handling for paired fields with no defined key
         else if ((formatKey.getGenericKey()!=null)&&
-                 ((formatKey.getGenericKey() == FieldKey.PERFORMER)||(formatKey.getGenericKey() == FieldKey.INVOLVED_PERSON))
+                 (formatKey.getGenericKey() == FieldKey.INVOLVEDPEOPLE)
                 )
         {
             List<TagField> list = getFields(formatKey.getFrameId());
@@ -2561,7 +2572,7 @@ public abstract class AbstractID3v2Tag extends AbstractID3Tag implements Tag
             }
         }
         else if ((formatKey.getGenericKey()!=null) &&
-                 ((formatKey.getGenericKey() == FieldKey.PERFORMER) || (formatKey.getGenericKey() == FieldKey.INVOLVED_PERSON))
+                 (formatKey.getGenericKey() == FieldKey.INVOLVEDPEOPLE)
                 )
         {
             List<TagField> list = getFields(formatKey.getFrameId());

@@ -94,6 +94,7 @@ public enum Mp4FieldKey
     GROUPING("©grp",Mp4TagFieldSubType.TEXT, TEXT),
     INSTRUMENT("com.apple.iTunes", "INSTRUMENT", TEXT, Tagger.JAIKOZ),
     INVOLVED_PEOPLE("peop",Mp4TagFieldSubType.TEXT, TEXT, Tagger.MEDIA_MONKEY),
+    INVOLVEDPEOPLE("com.apple.iTunes", "involvedpeople", TEXT, Tagger.ROON),
     IPI("com.apple.iTunes", "IPI", TEXT, Tagger.PICARD),
     ISRC("com.apple.iTunes", "ISRC", TEXT, Tagger.JAIKOZ),
     ISWC("com.apple.iTunes", "ISWC", TEXT, Tagger.JAIKOZ),

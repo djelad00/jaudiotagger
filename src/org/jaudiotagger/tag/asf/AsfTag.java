@@ -137,7 +137,7 @@ public final class AsfTag extends AbstractTag
         tagFieldToAsfField.put(FieldKey.GROUP, AsfFieldKey.GROUP);
         tagFieldToAsfField.put(FieldKey.GROUPING, AsfFieldKey.GROUPING);
         tagFieldToAsfField.put(FieldKey.INSTRUMENT, AsfFieldKey.INSTRUMENT);
-        tagFieldToAsfField.put(FieldKey.INVOLVED_PERSON, AsfFieldKey.INVOLVED_PERSON);
+        tagFieldToAsfField.put(FieldKey.INVOLVEDPEOPLE, AsfFieldKey.INVOLVED_PERSON);
         tagFieldToAsfField.put(FieldKey.IPI, AsfFieldKey.IPI);
         tagFieldToAsfField.put(FieldKey.ISRC, AsfFieldKey.ISRC);
         tagFieldToAsfField.put(FieldKey.ISWC, AsfFieldKey.ISWC);

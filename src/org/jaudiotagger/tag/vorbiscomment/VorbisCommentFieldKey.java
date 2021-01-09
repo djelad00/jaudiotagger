@@ -75,7 +75,7 @@ public enum VorbisCommentFieldKey
     GROUP("GROUP",EnumSet.of(Tagger.JAIKOZ)),
     GROUPING("GROUPING",EnumSet.of(Tagger.PICARD,Tagger.JAIKOZ)),
     INSTRUMENT("INSTRUMENT",EnumSet.of(Tagger.JAIKOZ)),
-    INVOLVED_PERSON("INVOLVED_PERSON", EnumSet.of(Tagger.JAIKOZ)),
+    INVOLVEDPEOPLE("INVOLVEDPEOPLE", EnumSet.of(Tagger.ROON)),
     IPI("IPI",EnumSet.of(Tagger.JAIKOZ)),
     ISRC("ISRC",EnumSet.of(Tagger.XIPH,Tagger.PICARD,Tagger.JAIKOZ)),
     ISWC("ISWC",EnumSet.of(Tagger.XIPH,Tagger.PICARD,Tagger.JAIKOZ)),

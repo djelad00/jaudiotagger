@@ -59,7 +59,7 @@ public enum FieldKey
     GROUP,
     GROUPING,
     INSTRUMENT,
-    INVOLVED_PERSON,
+    INVOLVEDPEOPLE,
     IPI,
     ISRC,
     ISWC,

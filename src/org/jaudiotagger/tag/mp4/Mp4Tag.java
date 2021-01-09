@@ -95,7 +95,7 @@ public class Mp4Tag extends AbstractTag
         tagFieldToMp4Field.put(FieldKey.GROUP, Mp4FieldKey.GROUP);
         tagFieldToMp4Field.put(FieldKey.GROUPING, Mp4FieldKey.GROUPING);
         tagFieldToMp4Field.put(FieldKey.INSTRUMENT, Mp4FieldKey.INSTRUMENT);
-        tagFieldToMp4Field.put(FieldKey.INVOLVED_PERSON, Mp4FieldKey.INVOLVED_PEOPLE);
+        tagFieldToMp4Field.put(FieldKey.INVOLVEDPEOPLE, Mp4FieldKey.INVOLVEDPEOPLE);
         tagFieldToMp4Field.put(FieldKey.IPI, Mp4FieldKey.IPI);
         tagFieldToMp4Field.put(FieldKey.ISRC, Mp4FieldKey.ISRC);
         tagFieldToMp4Field.put(FieldKey.ISWC, Mp4FieldKey.ISWC);
