@@ -16,6 +16,7 @@
 package org.jaudiotagger.tag.id3;
 
 import org.jaudiotagger.tag.FieldKey;
+import org.jaudiotagger.tag.id3.framebody.FrameBodyTXXX;
 
 import java.util.EnumMap;
 import java.util.Map;
@@ -545,6 +546,7 @@ public class ID3v24Frames extends ID3Frames
         tagFieldToId3.put(FieldKey.MUSICBRAINZ_WORK_PART_LEVEL5_TYPE, ID3v24FieldKey.WORK_PART_LEVEL5_TYPE);
         tagFieldToId3.put(FieldKey.MUSICBRAINZ_WORK_PART_LEVEL6, ID3v24FieldKey.WORK_PART_LEVEL6);
         tagFieldToId3.put(FieldKey.MUSICBRAINZ_WORK_PART_LEVEL6_TYPE, ID3v24FieldKey.WORK_PART_LEVEL6_TYPE);
+        tagFieldToId3.put(FieldKey.VERSION, ID3v24FieldKey.VERSION);
         tagFieldToId3.put(FieldKey.WORK_TYPE, ID3v24FieldKey.WORK_TYPE);
         tagFieldToId3.put(FieldKey.YEAR, ID3v24FieldKey.YEAR);
         populateId3ToTagField();

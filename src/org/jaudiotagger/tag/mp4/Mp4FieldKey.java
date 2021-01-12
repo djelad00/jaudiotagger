@@ -240,6 +240,7 @@ public enum Mp4FieldKey
     URL_OFFICIAL_RELEASE_SITE("com.apple.iTunes", "URL_OFFICIAL_RELEASE_SITE", TEXT, Tagger.JAIKOZ),
     URL_WIKIPEDIA_ARTIST_SITE("com.apple.iTunes", "URL_WIKIPEDIA_ARTIST_SITE", TEXT, Tagger.JAIKOZ),
     URL_WIKIPEDIA_RELEASE_SITE("com.apple.iTunes", "URL_WIKIPEDIA_RELEASE_SITE", TEXT, Tagger.JAIKOZ),
+    VERSION("com.apple.iTunes", "VERSION", TEXT, Tagger.ROON),
     WINAMP_PUBLISHER("com.nullsoft.winamp", "publisher", TEXT, Tagger.WINAMP),
     WORK("©wrk",Mp4TagFieldSubType.TEXT, TEXT),
     WORK_TYPE("com.apple.iTunes","WORK_TYPE",  TEXT, Tagger.JAIKOZ),

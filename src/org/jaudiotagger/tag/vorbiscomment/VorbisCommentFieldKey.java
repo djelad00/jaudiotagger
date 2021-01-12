@@ -195,7 +195,7 @@ public enum VorbisCommentFieldKey
     URL_WIKIPEDIA_ARTIST_SITE("URL_WIKIPEDIA_ARTIST_SITE",EnumSet.of(Tagger.JAIKOZ)),
     URL_WIKIPEDIA_RELEASE_SITE("URL_WIKIPEDIA_RELEASE_SITE",EnumSet.of(Tagger.JAIKOZ)),
     VENDOR("VENDOR"),
-    VERSION("VERSION", EnumSet.of(Tagger.XIPH)),// The version field may be used to differentiate multiple versions of the same track title in a single collection. (e.g. remix info)
+    VERSION("ROONVERSION", EnumSet.of(Tagger.XIPH, Tagger.ROON)),// The version field may be used to differentiate multiple versions of the same track title in a single collection. (e.g. remix info)
     WORK("WORK",EnumSet.of(Tagger.JAIKOZ)),
     WORK_TYPE("WORK_TYPE",EnumSet.of(Tagger.JAIKOZ)),
     ;

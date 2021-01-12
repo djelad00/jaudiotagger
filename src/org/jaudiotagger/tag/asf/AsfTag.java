@@ -250,9 +250,11 @@ public final class AsfTag extends AbstractTag
         tagFieldToAsfField.put(FieldKey.URL_OFFICIAL_RELEASE_SITE, AsfFieldKey.URL_OFFICIAL_RELEASE_SITE);
         tagFieldToAsfField.put(FieldKey.URL_WIKIPEDIA_ARTIST_SITE, AsfFieldKey.URL_WIKIPEDIA_ARTIST_SITE);
         tagFieldToAsfField.put(FieldKey.URL_WIKIPEDIA_RELEASE_SITE, AsfFieldKey.URL_WIKIPEDIA_RELEASE_SITE);
+        tagFieldToAsfField.put(FieldKey.VERSION, AsfFieldKey.VERSION);
         tagFieldToAsfField.put(FieldKey.WORK, AsfFieldKey.WORK);
         tagFieldToAsfField.put(FieldKey.WORK_TYPE, AsfFieldKey.WORK_TYPE);
         tagFieldToAsfField.put(FieldKey.YEAR, AsfFieldKey.YEAR);
+
     }
 
     static

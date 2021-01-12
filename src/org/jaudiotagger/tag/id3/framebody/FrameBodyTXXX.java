@@ -152,6 +152,7 @@ public class FrameBodyTXXX extends AbstractFrameBodyTextInfo implements ID3v24Fr
     public static final String TIMBRE                                   = "TIMBRE_BRIGHTNESS";
     public static final String TITLE_MOVEMENT                           = "TITLE_MOVEMENT";
     public static final String TONALITY                                 = "TONALITY";
+    public static final String VERSION                                  = "VERSION";
     public static final String WORK                                     = "WORK";
     public static final String WORK_TYPE                                = "WORK_TYPE";
 

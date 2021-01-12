@@ -227,6 +227,7 @@ public enum AsfFieldKey
     URL_WIKIPEDIA_ARTIST_SITE("WM/WikipediaArtistUrl", false),
     URL_WIKIPEDIA_RELEASE_SITE("WM/WikipediaReleaseUrl", false),
     USER_RATING("WM/SharedUserRating", true),
+    VERSION("VERSION", false),
     WORK("WORK", true),
     WORK_TYPE("WORK_TYPE",true),
     YEAR("WM/Year", false),

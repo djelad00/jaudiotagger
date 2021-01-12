@@ -207,6 +207,7 @@ public class Mp4Tag extends AbstractTag
         tagFieldToMp4Field.put(FieldKey.URL_OFFICIAL_RELEASE_SITE, Mp4FieldKey.URL_OFFICIAL_RELEASE_SITE);
         tagFieldToMp4Field.put(FieldKey.URL_WIKIPEDIA_ARTIST_SITE, Mp4FieldKey.URL_WIKIPEDIA_ARTIST_SITE);
         tagFieldToMp4Field.put(FieldKey.URL_WIKIPEDIA_RELEASE_SITE, Mp4FieldKey.URL_WIKIPEDIA_RELEASE_SITE);
+        tagFieldToMp4Field.put(FieldKey.VERSION, Mp4FieldKey.VERSION);
         tagFieldToMp4Field.put(FieldKey.WORK, Mp4FieldKey.WORK);
         tagFieldToMp4Field.put(FieldKey.YEAR, Mp4FieldKey.DAY);
         tagFieldToMp4Field.put(FieldKey.WORK_TYPE, Mp4FieldKey.WORK_TYPE);
