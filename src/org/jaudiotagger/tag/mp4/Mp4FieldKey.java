@@ -185,7 +185,7 @@ public enum Mp4FieldKey
     ORCHESTRA("com.apple.iTunes", "ORCHESTRA", TEXT, Tagger.PICARD),
     ORCHESTRA_SORT("com.apple.iTunes","ORCHESTRA_SORT",  TEXT, Tagger.JAIKOZ),
     ORIGINAL_ALBUM_TITLE("otit",Mp4TagFieldSubType.TEXT, TEXT, Tagger.MEDIA_MONKEY),
-    ORIGINAL_ALBUM_YEAR("com.apple.iTunes", "ORIGINAL_ALBUM_YEAR", TEXT, Tagger.JAIKOZ),
+    ORIGINALRELEASEDATE("com.apple.iTunes", "ORIGINALRELEASEDATE", TEXT, Tagger.ROON),
     ORIGINAL_ARTIST("oart",Mp4TagFieldSubType.TEXT, TEXT, Tagger.MEDIA_MONKEY),
     ORIGINAL_LYRICIST("olyr",Mp4TagFieldSubType.TEXT, TEXT, Tagger.MEDIA_MONKEY),
     OVERALL_WORK("com.apple.iTunes", "OVERALL_WORK", TEXT, Tagger.JAIKOZ),

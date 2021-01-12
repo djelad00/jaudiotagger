@@ -183,7 +183,7 @@ public enum AsfFieldKey
     ORCHESTRA("ORCHESTRA", true),
     ORCHESTRA_SORT("ORCHESTRA_SORT",true),
     ORIGINAL_ALBUM("WM/OriginalAlbumTitle", true),
-    ORIGINAL_ALBUM_YEAR("ORIGINAL_ALBUM_YEAR", false),
+    ORIGINALRELEASEDATE("ORIGINALRELEASEDATE", false),
     ORIGINAL_ARTIST("WM/OriginalArtist", true),
     ORIGINAL_LYRICIST("WM/OriginalLyricist", true),
     ORIGINAL_YEAR("WM/OriginalReleaseYear", true),
