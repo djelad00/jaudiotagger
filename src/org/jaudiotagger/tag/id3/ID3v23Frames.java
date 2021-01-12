@@ -544,7 +544,7 @@ public class ID3v23Frames extends ID3Frames
         tagFieldToId3.put(FieldKey.MUSICBRAINZ_WORK_PART_LEVEL5_TYPE, ID3v23FieldKey.WORK_PART_LEVEL5_TYPE);
         tagFieldToId3.put(FieldKey.MUSICBRAINZ_WORK_PART_LEVEL6, ID3v23FieldKey.WORK_PART_LEVEL6);
         tagFieldToId3.put(FieldKey.MUSICBRAINZ_WORK_PART_LEVEL6_TYPE, ID3v23FieldKey.WORK_PART_LEVEL6_TYPE);
-        tagFieldToId3.put(FieldKey.VERSION, ID3v23FieldKey.ORIGINALRELEASEDATE);
+        tagFieldToId3.put(FieldKey.VERSION, ID3v23FieldKey.VERSION);
         tagFieldToId3.put(FieldKey.WORK_TYPE, ID3v23FieldKey.WORK_TYPE);
         tagFieldToId3.put(FieldKey.YEAR, ID3v23FieldKey.YEAR);
 
