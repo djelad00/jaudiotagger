@@ -66,6 +66,7 @@ public enum FieldKey
     IS_CLASSICAL,
     IS_GREATEST_HITS,
     IS_HD,
+    IS_LIVE,
     IS_SOUNDTRACK,
     IS_COMPILATION,
     ITUNES_GROUPING,

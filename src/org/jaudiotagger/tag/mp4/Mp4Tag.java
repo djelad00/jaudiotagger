@@ -103,6 +103,7 @@ public class Mp4Tag extends AbstractTag
         tagFieldToMp4Field.put(FieldKey.IS_CLASSICAL, Mp4FieldKey.IS_CLASSICAL);
         tagFieldToMp4Field.put(FieldKey.IS_GREATEST_HITS, Mp4FieldKey.IS_GREATEST_HITS);
         tagFieldToMp4Field.put(FieldKey.IS_HD, Mp4FieldKey.IS_HD);
+        tagFieldToMp4Field.put(FieldKey.IS_LIVE, IS_LIVE);
         tagFieldToMp4Field.put(FieldKey.IS_SOUNDTRACK, Mp4FieldKey.IS_SOUNDTRACK);
         tagFieldToMp4Field.put(FieldKey.KEY, Mp4FieldKey.KEY);
         tagFieldToMp4Field.put(FieldKey.LANGUAGE, Mp4FieldKey.LANGUAGE);

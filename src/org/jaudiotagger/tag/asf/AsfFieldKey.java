@@ -121,6 +121,7 @@ public enum AsfFieldKey
     IS_COMPILATION("WM/IsCompilation", false),
     IS_GREATEST_HITS("IS_GREATEST_HITS", false),
     IS_HD("IS_HD", false),
+    IS_LIVE("LIVE", false),
     IS_SOUNDTRACK("IS_SOUNDTRACK", false),
     LANGUAGE("WM/Language", true),
     LYRICIST("WM/Writer", true),

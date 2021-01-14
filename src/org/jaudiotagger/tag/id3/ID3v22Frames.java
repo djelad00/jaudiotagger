@@ -381,6 +381,7 @@ public class ID3v22Frames extends ID3Frames
         tagFieldToId3.put(FieldKey.IS_COMPILATION, ID3v22FieldKey.IS_COMPILATION);
         tagFieldToId3.put(FieldKey.IS_GREATEST_HITS, ID3v22FieldKey.IS_GREATEST_HITS);
         tagFieldToId3.put(FieldKey.IS_HD, ID3v22FieldKey.IS_HD);
+        tagFieldToId3.put(FieldKey.IS_LIVE, ID3v22FieldKey.IS_LIVE);
         tagFieldToId3.put(FieldKey.IS_SOUNDTRACK, ID3v22FieldKey.IS_SOUNDTRACK);
         tagFieldToId3.put(FieldKey.ITUNES_GROUPING, ID3v22FieldKey.ITUNES_GROUPING);
         tagFieldToId3.put(FieldKey.KEY, ID3v22FieldKey.KEY);

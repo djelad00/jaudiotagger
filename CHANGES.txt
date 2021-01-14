@@ -123,6 +123,7 @@ Summarise Changes
 #322:Problems writing metadata for DSF files larger than 2GB
 #329:Add support for Roon fields (and also SONGKONG_ID for SongKong)
 #331:Rename ORIGINAL_ALBUM_YEAR to ORIGINALRELEASEDATE so recognized by Roon
+#332:Add support for Roon LIVE field
 
 2.2.5
 #033:Added getAudioStartPos() and getAudioEndPos() methods to AudioHeader interface and implemented for most formats

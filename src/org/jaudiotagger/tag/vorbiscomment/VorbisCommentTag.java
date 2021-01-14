@@ -104,6 +104,7 @@ public class VorbisCommentTag extends AbstractTag
         tagFieldToOggField.put(FieldKey.IS_COMPILATION, VorbisCommentFieldKey.COMPILATION);
         tagFieldToOggField.put(FieldKey.IS_GREATEST_HITS, VorbisCommentFieldKey.IS_GREATEST_HITS);
         tagFieldToOggField.put(FieldKey.IS_HD, VorbisCommentFieldKey.IS_HD);
+        tagFieldToOggField.put(FieldKey.IS_LIVE, VorbisCommentFieldKey.IS_LIVE);
         tagFieldToOggField.put(FieldKey.IS_SOUNDTRACK, VorbisCommentFieldKey.IS_SOUNDTRACK);
         tagFieldToOggField.put(FieldKey.KEY, VorbisCommentFieldKey.KEY);
         tagFieldToOggField.put(FieldKey.LANGUAGE, VorbisCommentFieldKey.LANGUAGE);

@@ -102,6 +102,7 @@ public enum Mp4FieldKey
     IS_CLASSICAL("com.apple.iTunes", "IS_CLASSICAL", TEXT, Tagger.JAIKOZ),
     IS_GREATEST_HITS("com.apple.iTunes", "IS_GREATEST_HITS", TEXT, Tagger.JAIKOZ),
     IS_HD("com.apple.iTunes", "IS_HD", TEXT, Tagger.JAIKOZ),
+    IS_LIVE("com.apple.iTunes", "LIVE", TEXT, Tagger.ROON),
     IS_SOUNDTRACK("com.apple.iTunes", "IS_SOUNDTRACK", TEXT, Tagger.JAIKOZ),
     ITUNES_NORM("com.apple.iTunes", "iTunNORM", TEXT),
     ITUNES_SMPB("com.apple.iTunes", "iTunSMPB", TEXT),

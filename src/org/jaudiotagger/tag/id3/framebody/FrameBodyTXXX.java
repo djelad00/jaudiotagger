@@ -81,6 +81,7 @@ public class FrameBodyTXXX extends AbstractFrameBodyTextInfo implements ID3v24Fr
     public static final String IS_HD                        = "IS_HD";
     public static final String IS_SOUNDTRACK                = "IS_SOUNDTRACK";
     public static final String ISWC                         = "ISWC";
+    public static final String LIVE                         = "LIVE";
     public static final String LYRICIST_SORT                = "LYRICIST_SORT";
     public static final String MOOD                         = "MOOD";          //ID3 v23 only
     public static final String MOOD_ACOUSTIC                = "MOOD_ACOUSTIC";
