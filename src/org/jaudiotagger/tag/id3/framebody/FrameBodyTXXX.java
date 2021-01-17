@@ -56,6 +56,7 @@ public class FrameBodyTXXX extends AbstractFrameBodyTextInfo implements ID3v24Fr
     public static final String ACOUSTID_FINGERPRINT         = "Acoustid Fingerprint";
     public static final String ACOUSTID_ID                  = "Acoustid Id";
     public static final String AMAZON_ASIN                  = "ASIN";
+    public static final String ARRANGER                     = "ARRANGER";
     public static final String ARRANGER_SORT                = "ARRANGER_SORT";
     public static final String ARTISTS                      = "ARTISTS";
     public static final String ARTISTS_SORT                 = "ARTISTS_SORT";
@@ -70,6 +71,10 @@ public class FrameBodyTXXX extends AbstractFrameBodyTextInfo implements ID3v24Fr
     public static final String CLASSICAL_NICKNAME           = "CLASSICAL_NICKNAME";
     public static final String CONDUCTOR_SORT               = "CONDUCTOR_SORT";
     public static final String COUNTRY                      = "Country";
+    public static final String DJMIXER                      = "DJMIXER";
+    public static final String DJMIXER_SORT                 = "DJMIXER_SORT";
+    public static final String ENGINEER                     = "ENGINEER";
+    public static final String ENGINEER_SORT                = "ENGINEER_SORT";
     public static final String ENSEMBLE                     = "ENSEMBLE";
     public static final String ENSEMBLE_SORT                = "ENSEMBLE_SORT";
     public static final String FBPM                         = "FBPM";
@@ -83,6 +88,8 @@ public class FrameBodyTXXX extends AbstractFrameBodyTextInfo implements ID3v24Fr
     public static final String ISWC                         = "ISWC";
     public static final String LIVE                         = "LIVE";
     public static final String LYRICIST_SORT                = "LYRICIST_SORT";
+    public static final String MIXER                        = "MIXER";
+    public static final String MIXER_SORT                   = "MIXER_SORT";
     public static final String MOOD                         = "MOOD";          //ID3 v23 only
     public static final String MOOD_ACOUSTIC                = "MOOD_ACOUSTIC";
     public static final String MOOD_AGGRESSIVE              = "MOOD_AGGRESSIVE";
@@ -140,11 +147,14 @@ public class FrameBodyTXXX extends AbstractFrameBodyTextInfo implements ID3v24Fr
     public static final String PERFORMER_NAME                           = "PERFORMER_NAME";
     public static final String PERFORMER_NAME_SORT                      = "PERFORMER_NAME_SORT";
     public static final String PERIOD                                   = "PERIOD";
+    public static final String PRODUCER                                 = "PRODUCER";
+    public static final String PRODUCER_SORT                            = "PRODUCER_SORT";
     public static final String RANKING                                  = "RANKING";
     public static final String RECORDINGDATE                            = "RECORDINGDATE";
     public static final String RECORDINGSTARTDATE                       = "RECORDINGSTARTDATE";
     public static final String RECORDINGENDDATE                         = "RECORDINGENDDATE";
     public static final String RECORDINGLOCATION                        = "RECORDINGLOCATION";
+    public static final String REMIXER                                  = "REMIXER";
     public static final String SCRIPT                                   = "SCRIPT";
     public static final String SECTION                                  = "SECTION";
     public static final String SINGLE_DISC_TRACK_NO                     = "SINGLE_DISC_TRACK_NO";

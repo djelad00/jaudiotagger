@@ -87,8 +87,10 @@ public class VorbisCommentTag extends AbstractTag
         tagFieldToOggField.put(FieldKey.DISC_SUBTITLE, VorbisCommentFieldKey.DISCSUBTITLE);
         tagFieldToOggField.put(FieldKey.DISC_TOTAL, VorbisCommentFieldKey.DISCTOTAL);
         tagFieldToOggField.put(FieldKey.DJMIXER, VorbisCommentFieldKey.DJMIXER);
+        tagFieldToOggField.put(FieldKey.DJMIXER_SORT, VorbisCommentFieldKey.DJMIXER_SORT);
         tagFieldToOggField.put(FieldKey.ENCODER, VorbisCommentFieldKey.VENDOR);     //Known as vendor in VorbisComment
         tagFieldToOggField.put(FieldKey.ENGINEER, VorbisCommentFieldKey.ENGINEER);
+        tagFieldToOggField.put(FieldKey.ENGINEER_SORT, VorbisCommentFieldKey.ENGINEER_SORT);
         tagFieldToOggField.put(FieldKey.ENSEMBLE, VorbisCommentFieldKey.ENSEMBLE);
         tagFieldToOggField.put(FieldKey.ENSEMBLE_SORT, VorbisCommentFieldKey.ENSEMBLE_SORT);
         tagFieldToOggField.put(FieldKey.FBPM, VorbisCommentFieldKey.FBPM);
@@ -113,6 +115,7 @@ public class VorbisCommentTag extends AbstractTag
         tagFieldToOggField.put(FieldKey.LYRICS, VorbisCommentFieldKey.LYRICS);
         tagFieldToOggField.put(FieldKey.MEDIA, VorbisCommentFieldKey.MEDIA);
         tagFieldToOggField.put(FieldKey.MIXER, VorbisCommentFieldKey.MIXER);
+        tagFieldToOggField.put(FieldKey.MIXER_SORT, VorbisCommentFieldKey.MIXER_SORT);
         tagFieldToOggField.put(FieldKey.MOOD, VorbisCommentFieldKey.MOOD);
         tagFieldToOggField.put(FieldKey.MOOD_ACOUSTIC, VorbisCommentFieldKey.MOOD_ACOUSTIC);
         tagFieldToOggField.put(FieldKey.MOOD_AGGRESSIVE, VorbisCommentFieldKey.MOOD_AGGRESSIVE);
@@ -180,6 +183,7 @@ public class VorbisCommentTag extends AbstractTag
         tagFieldToOggField.put(FieldKey.PERFORMER_NAME_SORT, VorbisCommentFieldKey.PERFORMER_NAME_SORT);
         tagFieldToOggField.put(FieldKey.PERIOD, VorbisCommentFieldKey.PERIOD);
         tagFieldToOggField.put(FieldKey.PRODUCER, VorbisCommentFieldKey.PRODUCER);
+        tagFieldToOggField.put(FieldKey.PRODUCER_SORT, VorbisCommentFieldKey.PRODUCER_SORT);
         tagFieldToOggField.put(FieldKey.QUALITY, VorbisCommentFieldKey.QUALITY);
         tagFieldToOggField.put(FieldKey.RANKING, VorbisCommentFieldKey.RANKING);
         tagFieldToOggField.put(FieldKey.RATING, VorbisCommentFieldKey.RATING);

@@ -42,6 +42,11 @@ public class Mp4Tag extends AbstractTag
 
     private static final EnumMap<FieldKey, Mp4FieldKey> tagFieldToMp4Field = new EnumMap<FieldKey, Mp4FieldKey>(FieldKey.class);
 
+    public static EnumMap<FieldKey, Mp4FieldKey> getMapping()
+    {
+        return tagFieldToMp4Field;
+    }
+
     //Mapping from generic key to mp4 key
     static
     {
@@ -85,9 +90,11 @@ public class Mp4Tag extends AbstractTag
         tagFieldToMp4Field.put(FieldKey.DISC_SUBTITLE, Mp4FieldKey.DISC_SUBTITLE);
         tagFieldToMp4Field.put(FieldKey.DISC_TOTAL, Mp4FieldKey.DISCNUMBER);
         tagFieldToMp4Field.put(FieldKey.DJMIXER, Mp4FieldKey.DJMIXER);
+        tagFieldToMp4Field.put(FieldKey.DJMIXER_SORT, Mp4FieldKey.DJMIXER_SORT);
         tagFieldToMp4Field.put(FieldKey.MOOD_ELECTRONIC, Mp4FieldKey.MOOD_ELECTRONIC);
         tagFieldToMp4Field.put(FieldKey.ENCODER, Mp4FieldKey.ENCODER);
         tagFieldToMp4Field.put(FieldKey.ENGINEER, Mp4FieldKey.ENGINEER);
+        tagFieldToMp4Field.put(FieldKey.ENGINEER_SORT, Mp4FieldKey.ENGINEER_SORT);
         tagFieldToMp4Field.put(FieldKey.ENSEMBLE, Mp4FieldKey.ENSEMBLE);
         tagFieldToMp4Field.put(FieldKey.ENSEMBLE_SORT, Mp4FieldKey.ENSEMBLE_SORT);
         tagFieldToMp4Field.put(FieldKey.FBPM, Mp4FieldKey.FBPM);
@@ -112,6 +119,7 @@ public class Mp4Tag extends AbstractTag
         tagFieldToMp4Field.put(FieldKey.LYRICS, Mp4FieldKey.LYRICS);
         tagFieldToMp4Field.put(FieldKey.MEDIA, Mp4FieldKey.MEDIA);
         tagFieldToMp4Field.put(FieldKey.MIXER, Mp4FieldKey.MIXER);
+        tagFieldToMp4Field.put(FieldKey.MIXER_SORT, Mp4FieldKey.MIXER_SORT);
         tagFieldToMp4Field.put(FieldKey.MOOD, Mp4FieldKey.MOOD);
         tagFieldToMp4Field.put(FieldKey.MOOD_ACOUSTIC, Mp4FieldKey.MOOD_ACOUSTIC);
         tagFieldToMp4Field.put(FieldKey.MOOD_AGGRESSIVE, Mp4FieldKey.MOOD_AGGRESSIVE);
@@ -178,6 +186,7 @@ public class Mp4Tag extends AbstractTag
         tagFieldToMp4Field.put(FieldKey.PERFORMER_NAME_SORT, Mp4FieldKey.PERFORMER_NAME_SORT);
         tagFieldToMp4Field.put(FieldKey.PERIOD, Mp4FieldKey.PERIOD);
         tagFieldToMp4Field.put(FieldKey.PRODUCER, Mp4FieldKey.PRODUCER);
+        tagFieldToMp4Field.put(FieldKey.PRODUCER_SORT, Mp4FieldKey.PRODUCER_SORT);
         tagFieldToMp4Field.put(FieldKey.QUALITY, Mp4FieldKey.MM_QUALITY);
         tagFieldToMp4Field.put(FieldKey.RANKING, Mp4FieldKey.RANKING);
         tagFieldToMp4Field.put(FieldKey.RATING, Mp4FieldKey.SCORE);

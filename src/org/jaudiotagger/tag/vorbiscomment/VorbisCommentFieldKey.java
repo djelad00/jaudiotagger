@@ -65,9 +65,11 @@ public enum VorbisCommentFieldKey
     DISCSUBTITLE("DISCSUBTITLE",EnumSet.of(Tagger.PICARD,Tagger.JAIKOZ)),
     DISCTOTAL("DISCTOTAL",EnumSet.of(Tagger.XIPH,Tagger.PICARD)),
     DJMIXER("DJMIXER",EnumSet.of(Tagger.PICARD)),
+    DJMIXER_SORT("DJMIXER_SORT",EnumSet.of(Tagger.SONGKONG)),
     ENCODEDBY("ENCODEDBY",EnumSet.of(Tagger.PICARD)),
     ENCODER("ENCODER"),
     ENGINEER("ENGINEER",EnumSet.of(Tagger.PICARD,Tagger.ROON)),
+    ENGINEER_SORT("ENGINEER_SORT",EnumSet.of(Tagger.SONGKONG)),
     ENSEMBLE("ENSEMBLE",EnumSet.of(Tagger.MEDIA_MONKEY, Tagger.JAIKOZ,Tagger.ROON)),
     ENSEMBLE_SORT("ENSEMBLE_SORT",EnumSet.of(Tagger.JAIKOZ)),
     FBPM("FBPM",EnumSet.of(Tagger.BEATUNES)),
@@ -95,6 +97,7 @@ public enum VorbisCommentFieldKey
     MEDIA("MEDIA",EnumSet.of(Tagger.PICARD,Tagger.JAIKOZ)),
     METADATA_BLOCK_PICTURE("METADATA_BLOCK_PICTURE",EnumSet.of(Tagger.XIPH)),
     MIXER("MIXER",EnumSet.of(Tagger.PICARD)),
+    MIXER_SORT("MIXER_SORT",EnumSet.of(Tagger.SONGKONG)),
     MOOD("MOOD",EnumSet.of(Tagger.PICARD,Tagger.JAIKOZ)),
     MOOD_ACOUSTIC("MOOD_ACOUSTIC", EnumSet.of(Tagger.JAIKOZ)),
     MOOD_AGGRESSIVE("MOOD_AGGRESSIVE", EnumSet.of(Tagger.JAIKOZ)),
@@ -163,6 +166,7 @@ public enum VorbisCommentFieldKey
     PERFORMER_NAME_SORT("PERFORMER_NAME_SORT",EnumSet.of(Tagger.JAIKOZ)),
     PERIOD("PERIOD",EnumSet.of(Tagger.MUSICHI)),
     PRODUCER("PRODUCER",EnumSet.of(Tagger.PICARD,Tagger.ROON)),
+    PRODUCER_SORT("PRODUCER_SORT",EnumSet.of(Tagger.SONGKONG)),
     PRODUCTNUMBER("PRODUCTNUMBER",EnumSet.of(Tagger.XIPH)),
     QUALITY("QUALITY",EnumSet.of(Tagger.MEDIA_MONKEY)),
     RANKING("RANKING",EnumSet.of(Tagger.JAIKOZ)),
@@ -204,6 +208,7 @@ public enum VorbisCommentFieldKey
 
     private String fieldName;
     private EnumSet<Tagger> taggers;
+    private String realFieldName;
 
     VorbisCommentFieldKey(String fieldName)
     {
@@ -216,9 +221,27 @@ public enum VorbisCommentFieldKey
         this.taggers = taggers;
     }
 
+    VorbisCommentFieldKey(String fieldName, String realFieldName)
+    {
+        this.fieldName = fieldName;
+        this.realFieldName = realFieldName;
+    }
+
+    VorbisCommentFieldKey(String fieldName, String realFieldName, EnumSet<Tagger> taggers)
+    {
+        this.fieldName = fieldName;
+        this.realFieldName = realFieldName;
+        this.taggers = taggers;
+    }
+
     public String getFieldName()
     {
         return fieldName;
+    }
+
+    public String getRealFieldName()
+    {
+        return realFieldName;
     }
 
     /**

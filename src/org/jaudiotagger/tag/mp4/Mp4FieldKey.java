@@ -81,8 +81,10 @@ public enum Mp4FieldKey
     DISCNUMBER("disk",Mp4TagFieldSubType.DISC_NO, IMPLICIT),
     DISC_SUBTITLE("com.apple.iTunes", "DISCSUBTITLE", TEXT, Tagger.PICARD),
     DJMIXER("com.apple.iTunes", "DJMIXER", TEXT, Tagger.PICARD),
+    DJMIXER_SORT("com.apple.iTunes", "DJMIXER_SORT", TEXT, Tagger.SONGKONG),
     ENCODER("©too",Mp4TagFieldSubType.TEXT, TEXT),
     ENGINEER("com.apple.iTunes", "ENGINEER", TEXT, Tagger.PICARD),
+    ENGINEER_SORT("com.apple.iTunes", "ENGINEER_SORT", TEXT, Tagger.SONGKONG),
     ENSEMBLE("com.apple.iTunes", "Ensemble", TEXT, Tagger.JAIKOZ),
     ENSEMBLE_SORT("com.apple.iTunes","Ensemble Sort",  TEXT, Tagger.JAIKOZ),
     EPISODE_GLOBAL_ID("egid",Mp4TagFieldSubType.NUMBER, IMPLICIT),   //TODO Actually seems to store text but is marked as numeric!
@@ -118,6 +120,7 @@ public enum Mp4FieldKey
     LYRICS("©lyr",Mp4TagFieldSubType.TEXT, TEXT),
     MEDIA("com.apple.iTunes", "MEDIA", TEXT, Tagger.PICARD),
     MIXER("com.apple.iTunes", "MIXER", TEXT, Tagger.PICARD),
+    MIXER_SORT("com.apple.iTunes", "MIXER_SORT", TEXT, Tagger.SONGKONG),
     MM_CUSTOM_1("com.apple.iTunes", "CUSTOM1", TEXT, Tagger.MEDIA_MONKEY),
     MM_CUSTOM_2("com.apple.iTunes", "CUSTOM2", TEXT, Tagger.MEDIA_MONKEY),
     MM_CUSTOM_3("com.apple.iTunes", "CUSTOM3", TEXT, Tagger.MEDIA_MONKEY),
@@ -202,6 +205,7 @@ public enum Mp4FieldKey
     PODCAST_KEYWORD("keyw",Mp4TagFieldSubType.TEXT, TEXT),
     PODCAST_URL("purl",Mp4TagFieldSubType.NUMBER, IMPLICIT),   //TODO Actually seems to store text but is marked as numeric!
     PRODUCER("com.apple.iTunes", "PRODUCER", TEXT, Tagger.PICARD),
+    PRODUCER_SORT("com.apple.iTunes", "PRODUCER_SORT", TEXT, Tagger.SONGKONG),
     PURCHASE_DATE("purd",Mp4TagFieldSubType.TEXT, TEXT),
     QUALITY("qual",Mp4TagFieldSubType.TEXT, TEXT, Tagger.MEDIA_MONKEY),
     RANKING("com.apple.iTunes","RANKING",  TEXT, Tagger.JAIKOZ),

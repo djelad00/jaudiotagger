@@ -18,8 +18,11 @@ import org.jaudiotagger.tag.Tag;
 import org.jaudiotagger.tag.TagException;
 import org.jaudiotagger.tag.TagField;
 import org.jaudiotagger.tag.TagOptionSingleton;
+import org.jaudiotagger.tag.asf.AsfTagTextField;
 import org.jaudiotagger.tag.id3.valuepair.ImageFormats;
 import org.jaudiotagger.tag.reference.PictureTypes;
+import org.jaudiotagger.tag.vorbiscomment.VorbisCommentTag;
+import org.jaudiotagger.tag.vorbiscomment.VorbisCommentTagField;
 
 import java.io.File;
 import java.io.IOException;
@@ -549,5 +552,60 @@ public class FlacWriteTest extends TestCase
     	FilePermissionsTest.runWriteReadOnlyFileWithCheckDisabled("test2.flac");
 	}
 
+    /**
+     * Just create fields for all the tag field keys defined, se if we hit any problems
+     */
+    public void testTagFieldKeyWrite()
+    {
+        Exception exceptionCaught = null;
+        try
+        {
+            File testFile = AbstractTestCase.copyAudioToTmp("test.flac", new File("testwrite1.flac"));
 
+            AudioFile f = AudioFileIO.read(testFile);
+            AudioFileIO.delete(f);
+
+            // Tests multiple iterations on same file
+            for (int i = 0; i < 2; i++)
+            {
+                f = AudioFileIO.read(testFile);
+                Tag tag = f.getTag();
+                for (FieldKey key : FieldKey.values())
+                {
+                    if (!(key == FieldKey.COVER_ART) && !(key == FieldKey.ITUNES_GROUPING) && !(key.isInvolvedPeopleField()))
+                    {
+                        System.out.println(key);
+                        tag.setField(tag.createField(key, key.name() + "_value_" + i));
+                    }
+                }
+                f.commit();
+                f = AudioFileIO.read(testFile);
+                tag = f.getTag();
+                for (FieldKey key : FieldKey.values())
+                {
+                    /*
+                     * Test value retrieval, using multiple access methods.
+                     */
+                    if (!(key == FieldKey.COVER_ART) && !(key == FieldKey.ITUNES_GROUPING) && !(key.isInvolvedPeopleField()))
+                    {
+                        String value = key.name() + "_value_" + i;
+                        System.out.println("Value is:" + value);
+
+                        assertEquals(value, tag.getFirst(key));
+                        VorbisCommentTagField atf =  (VorbisCommentTagField)tag.getFields(key).get(0);
+                        assertEquals(value, atf.getContent());
+                        atf = (VorbisCommentTagField) tag.getFields(key).get(0);
+                        assertEquals(value, atf.getContent());
+                    }
+
+                }
+            }
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+            exceptionCaught = e;
+        }
+        assertNull(exceptionCaught);
+    }
 }

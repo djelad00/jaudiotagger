@@ -24,7 +24,8 @@ public class AsfKeyMappingTest extends TestCase
         {
             for (FieldKey curr : FieldKey.values())
             {
-                if(curr != FieldKey.ITUNES_GROUPING)
+                System.out.println(curr);
+                if((curr != FieldKey.ITUNES_GROUPING) && !curr.isInvolvedPeopleField())
                 {
                     tag.getFields(curr);
                 }

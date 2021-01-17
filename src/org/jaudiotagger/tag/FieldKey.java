@@ -22,6 +22,7 @@ public enum FieldKey
     AMAZON_ID,
     ARRANGER,
     ARRANGER_SORT,
+    ARRANGER_INVOLVEDPEOPLE(true),
     ARTIST,
     ARTISTS,
     ARTISTS_SORT,
@@ -50,8 +51,12 @@ public enum FieldKey
     DISC_SUBTITLE,
     DISC_TOTAL,
     DJMIXER,
+    DJMIXER_SORT,
+    DJMIXER_INVOLVEDPEOPLE(true),
     ENCODER,
     ENGINEER,
+    ENGINEER_SORT,
+    ENGINEER_INVOLVEDPEOPLE(true),
     ENSEMBLE,
     ENSEMBLE_SORT,
     FBPM,
@@ -77,6 +82,8 @@ public enum FieldKey
     LYRICS,
     MEDIA,
     MIXER,
+    MIXER_SORT,
+    MIXER_INVOLVEDPEOPLE(true),
     MOOD,
     MOOD_ACOUSTIC,
     MOOD_AGGRESSIVE,
@@ -144,6 +151,8 @@ public enum FieldKey
     PERFORMER_NAME_SORT,
     PERIOD,
     PRODUCER,
+    PRODUCER_SORT,
+    PRODUCER_INVOLVEDPEOPLE(true),
     QUALITY,
     RANKING,
     RATING,
@@ -179,4 +188,22 @@ public enum FieldKey
     YEAR,
     VERSION
     ;
+
+    private boolean isInvolvedPeopleField;
+
+    FieldKey()
+    {
+
+    }
+
+    FieldKey(boolean isInvolvedPeopleField)
+    {
+        this.isInvolvedPeopleField =isInvolvedPeopleField;
+    }
+
+    public boolean isInvolvedPeopleField()
+    {
+        return isInvolvedPeopleField;
+    }
+
 }

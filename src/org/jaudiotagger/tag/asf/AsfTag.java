@@ -127,9 +127,11 @@ public final class AsfTag extends AbstractTag
         tagFieldToAsfField.put(FieldKey.DISC_SUBTITLE, AsfFieldKey.DISC_SUBTITLE);
         tagFieldToAsfField.put(FieldKey.DISC_TOTAL, AsfFieldKey.DISC_TOTAL);
         tagFieldToAsfField.put(FieldKey.DJMIXER, AsfFieldKey.DJMIXER);
+        tagFieldToAsfField.put(FieldKey.DJMIXER_SORT, AsfFieldKey.DJMIXER_SORT);
         tagFieldToAsfField.put(FieldKey.MOOD_ELECTRONIC, AsfFieldKey.MOOD_ELECTRONIC);
         tagFieldToAsfField.put(FieldKey.ENCODER, AsfFieldKey.ENCODER);
         tagFieldToAsfField.put(FieldKey.ENGINEER, AsfFieldKey.ENGINEER);
+        tagFieldToAsfField.put(FieldKey.ENGINEER_SORT, AsfFieldKey.ENGINEER_SORT);
         tagFieldToAsfField.put(FieldKey.ENSEMBLE, AsfFieldKey.ENSEMBLE);
         tagFieldToAsfField.put(FieldKey.ENSEMBLE_SORT, AsfFieldKey.ENSEMBLE_SORT);
         tagFieldToAsfField.put(FieldKey.FBPM, AsfFieldKey.FBPM);
@@ -154,6 +156,7 @@ public final class AsfTag extends AbstractTag
         tagFieldToAsfField.put(FieldKey.LYRICS, AsfFieldKey.LYRICS);
         tagFieldToAsfField.put(FieldKey.MEDIA, AsfFieldKey.MEDIA);
         tagFieldToAsfField.put(FieldKey.MIXER, AsfFieldKey.MIXER);
+        tagFieldToAsfField.put(FieldKey.MIXER_SORT, AsfFieldKey.MIXER_SORT);
         tagFieldToAsfField.put(FieldKey.MOOD, AsfFieldKey.MOOD);
         tagFieldToAsfField.put(FieldKey.MOOD_ACOUSTIC, AsfFieldKey.MOOD_ACOUSTIC);
         tagFieldToAsfField.put(FieldKey.MOOD_AGGRESSIVE, AsfFieldKey.MOOD_AGGRESSIVE);
@@ -201,7 +204,6 @@ public final class AsfTag extends AbstractTag
         tagFieldToAsfField.put(FieldKey.MUSICBRAINZ_WORK_PART_LEVEL6, AsfFieldKey.MUSICBRAINZ_WORK_PART_LEVEL6);
         tagFieldToAsfField.put(FieldKey.MUSICBRAINZ_WORK_PART_LEVEL6_ID, AsfFieldKey.MUSICBRAINZ_WORK_PART_LEVEL6_ID);
         tagFieldToAsfField.put(FieldKey.MUSICBRAINZ_WORK_PART_LEVEL6_TYPE, AsfFieldKey.MUSICBRAINZ_WORK_PART_LEVEL6_TYPE);
-
         tagFieldToAsfField.put(FieldKey.MUSICIP_ID, AsfFieldKey.MUSICIP_ID);
         tagFieldToAsfField.put(FieldKey.OCCASION, AsfFieldKey.OCCASION);
         tagFieldToAsfField.put(FieldKey.OPUS, AsfFieldKey.OPUS);
@@ -221,6 +223,7 @@ public final class AsfTag extends AbstractTag
         tagFieldToAsfField.put(FieldKey.PERFORMER_NAME_SORT, AsfFieldKey.PERFORMER_NAME_SORT);
         tagFieldToAsfField.put(FieldKey.PERIOD, AsfFieldKey.PERIOD);
         tagFieldToAsfField.put(FieldKey.PRODUCER, AsfFieldKey.PRODUCER);
+        tagFieldToAsfField.put(FieldKey.PRODUCER_SORT, AsfFieldKey.PRODUCER_SORT);
         tagFieldToAsfField.put(FieldKey.QUALITY, AsfFieldKey.QUALITY);
         tagFieldToAsfField.put(FieldKey.RANKING, AsfFieldKey.RANKING);
         tagFieldToAsfField.put(FieldKey.RATING, AsfFieldKey.USER_RATING);

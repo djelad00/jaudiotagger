@@ -239,11 +239,11 @@ public class InvolvedPeopleTest extends AbstractTestCase
         assertNull(f.getTag());
 
         f.setTag(new ID3v24Tag());
-        f.getTag().setField(FieldKey.PRODUCER,"steve lilllywhite");
+        f.getTag().setField(FieldKey.PRODUCER_INVOLVEDPEOPLE,"steve lilllywhite");
         f.getTag().addField(FieldKey.INVOLVEDPEOPLE,"harpist","Gloria Divosky");
         assertEquals(1,f.getTag().getFieldCount());
-        assertEquals("steve lilllywhite", f.getTag().getFirst(FieldKey.PRODUCER));
-        assertEquals("steve lilllywhite", f.getTag().getValue(FieldKey.PRODUCER,0));
+        assertEquals("steve lilllywhite", f.getTag().getFirst(FieldKey.PRODUCER_INVOLVEDPEOPLE));
+        assertEquals("steve lilllywhite", f.getTag().getValue(FieldKey.PRODUCER_INVOLVEDPEOPLE,0));
         assertEquals("harpist\0Gloria Divosky", f.getTag().getValue(FieldKey.INVOLVEDPEOPLE,0));
 
         f.commit();
@@ -252,8 +252,8 @@ public class InvolvedPeopleTest extends AbstractTestCase
         assertEquals(1,f.getTag().getFieldCount());
 
         f.getTag().deleteField(FieldKey.INVOLVEDPEOPLE);
-        assertEquals("steve lilllywhite", f.getTag().getFirst(FieldKey.PRODUCER));
-        assertEquals("steve lilllywhite", f.getTag().getValue(FieldKey.PRODUCER,0));
+        assertEquals("steve lilllywhite", f.getTag().getFirst(FieldKey.PRODUCER_INVOLVEDPEOPLE));
+        assertEquals("steve lilllywhite", f.getTag().getValue(FieldKey.PRODUCER_INVOLVEDPEOPLE,0));
         assertEquals(1,f.getTag().getFields(FieldKey.INVOLVEDPEOPLE).size());
         assertEquals(1,f.getTag().getFieldCount());
         assertEquals(1, f.getTag().getFieldCount());
@@ -264,7 +264,7 @@ public class InvolvedPeopleTest extends AbstractTestCase
         assertEquals(1,f.getTag().getFieldCount());
         assertEquals(1, f.getTag().getFieldCount());
 
-        f.getTag().deleteField(FieldKey.PRODUCER);
+        f.getTag().deleteField(FieldKey.PRODUCER_INVOLVEDPEOPLE);
         assertEquals(0,f.getTag().getFields(FieldKey.INVOLVEDPEOPLE).size());
         assertEquals(0,f.getTag().getFieldCount());
         assertEquals(0, f.getTag().getFieldCount());
@@ -277,11 +277,11 @@ public class InvolvedPeopleTest extends AbstractTestCase
         assertNull(f.getTag());
 
         f.setTag(new ID3v23Tag());
-        f.getTag().setField(FieldKey.PRODUCER,"steve lilllywhite");
+        f.getTag().setField(FieldKey.PRODUCER_INVOLVEDPEOPLE,"steve lilllywhite");
         f.getTag().addField(FieldKey.INVOLVEDPEOPLE,"harpist","Gloria Divosky");
         assertEquals(1,f.getTag().getFieldCount());
-        assertEquals("steve lilllywhite", f.getTag().getFirst(FieldKey.PRODUCER));
-        assertEquals("steve lilllywhite", f.getTag().getValue(FieldKey.PRODUCER,0));
+        assertEquals("steve lilllywhite", f.getTag().getFirst(FieldKey.PRODUCER_INVOLVEDPEOPLE));
+        assertEquals("steve lilllywhite", f.getTag().getValue(FieldKey.PRODUCER_INVOLVEDPEOPLE,0));
         assertEquals("harpist\0Gloria Divosky", f.getTag().getValue(FieldKey.INVOLVEDPEOPLE,0));
 
 
@@ -292,8 +292,8 @@ public class InvolvedPeopleTest extends AbstractTestCase
         assertEquals(1, f.getTag().getFieldCount());
 
         f.getTag().deleteField(FieldKey.INVOLVEDPEOPLE);
-        assertEquals("steve lilllywhite", f.getTag().getFirst(FieldKey.PRODUCER));
-        assertEquals("steve lilllywhite", f.getTag().getValue(FieldKey.PRODUCER,0));
+        assertEquals("steve lilllywhite", f.getTag().getFirst(FieldKey.PRODUCER_INVOLVEDPEOPLE));
+        assertEquals("steve lilllywhite", f.getTag().getValue(FieldKey.PRODUCER_INVOLVEDPEOPLE,0));
 
 
         f.commit();
@@ -310,11 +310,11 @@ public class InvolvedPeopleTest extends AbstractTestCase
         assertNull(f.getTag());
 
         f.setTag(new ID3v22Tag());
-        f.getTag().setField(FieldKey.PRODUCER,"steve lilllywhite");
+        f.getTag().setField(FieldKey.PRODUCER_INVOLVEDPEOPLE,"steve lilllywhite");
         f.getTag().addField(FieldKey.INVOLVEDPEOPLE,"harpist","Gloria Divosky");
         assertEquals(1,f.getTag().getFieldCount());
-        assertEquals("steve lilllywhite", f.getTag().getFirst(FieldKey.PRODUCER));
-        assertEquals("steve lilllywhite", f.getTag().getValue(FieldKey.PRODUCER,0));
+        assertEquals("steve lilllywhite", f.getTag().getFirst(FieldKey.PRODUCER_INVOLVEDPEOPLE));
+        assertEquals("steve lilllywhite", f.getTag().getValue(FieldKey.PRODUCER_INVOLVEDPEOPLE,0));
         assertEquals("harpist\0Gloria Divosky", f.getTag().getValue(FieldKey.INVOLVEDPEOPLE,0));
 
 
@@ -325,8 +325,8 @@ public class InvolvedPeopleTest extends AbstractTestCase
         assertEquals(1, f.getTag().getFieldCount());
 
         f.getTag().deleteField(FieldKey.INVOLVEDPEOPLE);
-        assertEquals("steve lilllywhite", f.getTag().getFirst(FieldKey.PRODUCER));
-        assertEquals("steve lilllywhite", f.getTag().getValue(FieldKey.PRODUCER,0));
+        assertEquals("steve lilllywhite", f.getTag().getFirst(FieldKey.PRODUCER_INVOLVEDPEOPLE));
+        assertEquals("steve lilllywhite", f.getTag().getValue(FieldKey.PRODUCER_INVOLVEDPEOPLE,0));
 
         f.commit();
         f = AudioFileIO.read(testFile);

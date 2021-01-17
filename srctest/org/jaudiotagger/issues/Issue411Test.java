@@ -145,17 +145,17 @@ public class Issue411Test extends AbstractTestCase
 
             File testFile = AbstractTestCase.copyAudioToTmp("01.mp3");
             AudioFile af = AudioFileIO.read(testFile);
-            af.getTagOrCreateAndSetDefault().setField(FieldKey.ENGINEER, "fred");
+            af.getTagOrCreateAndSetDefault().setField(FieldKey.ENGINEER_INVOLVEDPEOPLE, "fred");
             assertTrue(af.getTag() instanceof ID3v23Tag);
             af.commit();
             af = AudioFileIO.read(testFile);
-            assertEquals("fred", af.getTag().getFirst(FieldKey.ENGINEER));
-            af.getTag().addField(FieldKey.ENGINEER, "john");
+            assertEquals("fred", af.getTag().getFirst(FieldKey.ENGINEER_INVOLVEDPEOPLE));
+            af.getTag().addField(FieldKey.ENGINEER_INVOLVEDPEOPLE, "john");
             af.commit();
             af = AudioFileIO.read(testFile);
-            assertEquals("fred", af.getTag().getFirst(FieldKey.ENGINEER));
-            assertEquals("john",af.getTag().getValue(FieldKey.ENGINEER, 1));
-            assertEquals(2, af.getTag().getFields(FieldKey.ENGINEER).size());
+            assertEquals("fred", af.getTag().getFirst(FieldKey.ENGINEER_INVOLVEDPEOPLE));
+            assertEquals("john",af.getTag().getValue(FieldKey.ENGINEER_INVOLVEDPEOPLE, 1));
+            assertEquals(2, af.getTag().getFields(FieldKey.ENGINEER_INVOLVEDPEOPLE).size());
         }
         catch(Exception e)
         {

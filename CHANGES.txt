@@ -124,7 +124,8 @@ Summarise Changes
 #329:Add support for Roon fields (and also SONGKONG_ID for SongKong)
 #331:Rename ORIGINAL_ALBUM_YEAR to ORIGINALRELEASEDATE so recognized by Roon
 #332:Add support for Roon LIVE field
-
+#333:For ID3 rename PRODUCER, ARRANGER, ENGINEER, DJMIXER and MIXER to PRODUCER_INVOLVEDPEOPLE etc that will continue to write to TIPL/IPLS
+#333:Add new PRODUCER, ARRANGER, ENGINEER, DJMIXER and MIXER fields and assocaited sort fields that map to TXXX for ID3
 2.2.5
 #033:Added getAudioStartPos() and getAudioEndPos() methods to AudioHeader interface and implemented for most formats
 #036:Added getNoSamples() to AudioHeader interface
