@@ -126,7 +126,8 @@ Summarise Changes
 #332:Add support for Roon LIVE field
 #333:For ID3 rename PRODUCER, ARRANGER, ENGINEER, DJMIXER and MIXER to PRODUCER_INVOLVEDPEOPLE etc that will continue to write to TIPL/IPLS
 #333:Add new PRODUCER, ARRANGER, ENGINEER, DJMIXER and MIXER fields and assocaited sort fields that map to TXXX for ID3
-#334:Remove INVOLVEDPEOLE mappings such as PRODUCER_INVOLVED PEOPLE and simplify logic
+#334:Remove INVOLVEDPEOPLE mappings such as PRODUCER_INVOLVED PEOPLE and simplify logic
+#335:When converting ID3v23 IPLS frame should convert to TIPL and/or TMCL frame but only if have data
 
 2.2.5
 #033:Added getAudioStartPos() and getAudioEndPos() methods to AudioHeader interface and implemented for most formats

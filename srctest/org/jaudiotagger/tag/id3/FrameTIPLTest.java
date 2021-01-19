@@ -174,7 +174,7 @@ public class FrameTIPLTest extends AbstractTestCase
 
     public void testConvertV24ToV23v2() throws Exception
     {
-        File testFile = AbstractTestCase.copyAudioToTmp("testV1.mp3",new File("test1005.mp3"));
+        File testFile = AbstractTestCase.copyAudioToTmp("testV1.mp3",new File("test1005b.mp3"));
         MP3File mp3File = new MP3File(testFile);
 
         //Create and Save

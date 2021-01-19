@@ -1,33 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c6ab1c14-6cd1-42fd-af1f-7ac1a83b7f78" name="Default" comment="Add support for Roon LIVE field">
-      <change beforePath="$PROJECT_DIR$/jaudiotagger.iml" beforeDir="false" afterPath="$PROJECT_DIR$/jaudiotagger.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jaudiotagger.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/jaudiotagger.ipr" afterDir="false" />
+    <list default="true" id="c6ab1c14-6cd1-42fd-af1f-7ac1a83b7f78" name="Default" comment="#333:For ID3 rename PRODUCER, ARRANGER, ENGINEER, DJMIXER and MIXER to PRODUCER_INVOLVEDPEOPLE etc that will continue to write to TIPL/IPLS">
+      <change afterPath="$PROJECT_DIR$/srctest/org/jaudiotagger/issues/Issue335aTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/srctest/org/jaudiotagger/tag/id3/FrameIPLSTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CHANGES.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGES.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jaudiotagger.iws" beforeDir="false" afterPath="$PROJECT_DIR$/jaudiotagger.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/jaudiotagger/tag/FieldKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jaudiotagger/tag/FieldKey.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/jaudiotagger/tag/asf/AsfFieldKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jaudiotagger/tag/asf/AsfFieldKey.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/jaudiotagger/tag/asf/AsfTag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jaudiotagger/tag/asf/AsfTag.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/jaudiotagger/tag/id3/ID3v22FieldKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jaudiotagger/tag/id3/ID3v22FieldKey.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/jaudiotagger/tag/id3/ID3v22Frames.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jaudiotagger/tag/id3/ID3v22Frames.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/jaudiotagger/tag/id3/ID3v23FieldKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jaudiotagger/tag/id3/ID3v23FieldKey.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/jaudiotagger/tag/id3/ID3v23Frames.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jaudiotagger/tag/id3/ID3v23Frames.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/jaudiotagger/tag/id3/ID3v24FieldKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jaudiotagger/tag/id3/ID3v24FieldKey.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/jaudiotagger/tag/id3/ID3v24Frames.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jaudiotagger/tag/id3/ID3v24Frames.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/jaudiotagger/tag/id3/framebody/FrameBodyTXXX.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jaudiotagger/tag/id3/framebody/FrameBodyTXXX.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/jaudiotagger/tag/mp4/Mp4FieldKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jaudiotagger/tag/mp4/Mp4FieldKey.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/jaudiotagger/tag/mp4/Mp4Tag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jaudiotagger/tag/mp4/Mp4Tag.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/jaudiotagger/tag/vorbiscomment/VorbisCommentFieldKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jaudiotagger/tag/vorbiscomment/VorbisCommentFieldKey.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/jaudiotagger/tag/vorbiscomment/VorbisCommentTag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jaudiotagger/tag/vorbiscomment/VorbisCommentTag.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/srctest/org/jaudiotagger/audio/asf/tag/AsfKeyMappingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/srctest/org/jaudiotagger/audio/asf/tag/AsfKeyMappingTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/srctest/org/jaudiotagger/issues/Issue298Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/srctest/org/jaudiotagger/issues/Issue298Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/srctest/org/jaudiotagger/issues/Issue411Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/srctest/org/jaudiotagger/issues/Issue411Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/srctest/org/jaudiotagger/tag/flac/FlacWriteTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/srctest/org/jaudiotagger/tag/flac/FlacWriteTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/srctest/org/jaudiotagger/tag/id3/framebody/FrameBodyTIPLTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/srctest/org/jaudiotagger/tag/id3/framebody/FrameBodyTIPLTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/srctest/org/jaudiotagger/tag/id3/framebody/InvolvedPeopleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/srctest/org/jaudiotagger/tag/id3/framebody/InvolvedPeopleTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/srctest/org/jaudiotagger/tag/mp4/M4aWriteTagTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/srctest/org/jaudiotagger/tag/mp4/M4aWriteTagTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/srctest/org/jaudiotagger/tag/vorbiscomment/VorbisWriteTagTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/srctest/org/jaudiotagger/tag/vorbiscomment/VorbisWriteTagTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/srctest/org/jaudiotagger/tag/wma/WmaSimpleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/srctest/org/jaudiotagger/tag/wma/WmaSimpleTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/jaudiotagger/tag/id3/ID3v24Tag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jaudiotagger/tag/id3/ID3v24Tag.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -186,16 +165,16 @@
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="org.jaudiotagger.issues" />
+      <recent name="org.jaudiotagger.tag.id3" />
+      <recent name="org.jaudiotagger.tag.id3.framebody" />
       <recent name="org.jaudiotagger.tag.wav" />
       <recent name="org.jaudiotagger.audio.wav" />
-      <recent name="org.jaudiotagger.audio.mp4" />
-      <recent name="org.jaudiotagger.audio.iff" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Code\jthink\opensrc\jaudiotagger\testdata" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AsfKeyMappingTest.testTagFieldKeyMappingComplete">
+  <component name="RunManager" selected="JUnit.FrameTIPLTest">
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="" />
       <option name="ACTIVITY_CLASS" value="" />
@@ -305,16 +284,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AsfKeyMappingTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FrameIPLSTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="jaudiotagger" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.jaudiotagger.audio.asf.tag.*" />
+          <option name="PATTERN" value="org.jaudiotagger.tag.id3.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.jaudiotagger.audio.asf.tag" />
-      <option name="MAIN_CLASS_NAME" value="org.jaudiotagger.audio.asf.tag.AsfKeyMappingTest" />
+      <option name="PACKAGE_NAME" value="org.jaudiotagger.tag.id3" />
+      <option name="MAIN_CLASS_NAME" value="org.jaudiotagger.tag.id3.FrameIPLSTest" />
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="TEST_SEARCH_SCOPE">
@@ -324,38 +303,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AsfKeyMappingTest.testTagFieldKeyMappingComplete" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FrameTIPLTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="jaudiotagger" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.jaudiotagger.audio.asf.tag.*" />
+          <option name="PATTERN" value="org.jaudiotagger.tag.id3.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.jaudiotagger.audio.asf.tag" />
-      <option name="MAIN_CLASS_NAME" value="org.jaudiotagger.audio.asf.tag.AsfKeyMappingTest" />
-      <option name="METHOD_NAME" value="testTagFieldKeyMappingComplete" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FlacWriteTest.testTagFieldKeyWrite" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="jaudiotagger" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.jaudiotagger.tag.flac.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.jaudiotagger.tag.flac" />
-      <option name="MAIN_CLASS_NAME" value="org.jaudiotagger.tag.flac.FlacWriteTest" />
-      <option name="METHOD_NAME" value="testTagFieldKeyWrite" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="org.jaudiotagger.tag.id3" />
+      <option name="MAIN_CLASS_NAME" value="org.jaudiotagger.tag.id3.FrameTIPLTest" />
+      <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="TEST_SEARCH_SCOPE">
         <value defaultName="moduleWithDependencies" />
@@ -396,17 +354,36 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="M4aWriteTagTest.testTagFieldKeyWrite" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Issue335aTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="jaudiotagger" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.jaudiotagger.tag.mp4.*" />
+          <option name="PATTERN" value="org.jaudiotagger.issues.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.jaudiotagger.tag.mp4" />
-      <option name="MAIN_CLASS_NAME" value="org.jaudiotagger.tag.mp4.M4aWriteTagTest" />
-      <option name="METHOD_NAME" value="testTagFieldKeyWrite" />
+      <option name="PACKAGE_NAME" value="org.jaudiotagger.issues" />
+      <option name="MAIN_CLASS_NAME" value="org.jaudiotagger.issues.Issue335aTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Issue335aTest.testConvertV23v24_v1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="jaudiotagger" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.jaudiotagger.issues.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.jaudiotagger.issues" />
+      <option name="MAIN_CLASS_NAME" value="org.jaudiotagger.issues.Issue335aTest" />
+      <option name="METHOD_NAME" value="testConvertV23v24_v1" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="TEST_SEARCH_SCOPE">
@@ -416,17 +393,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WmaSimpleTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Issue335aTest.testConvertV23v24_v2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="jaudiotagger" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.jaudiotagger.tag.wma.*" />
+          <option name="PATTERN" value="org.jaudiotagger.issues.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.jaudiotagger.tag.wma" />
-      <option name="MAIN_CLASS_NAME" value="org.jaudiotagger.tag.wma.WmaSimpleTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="org.jaudiotagger.issues" />
+      <option name="MAIN_CLASS_NAME" value="org.jaudiotagger.issues.Issue335aTest" />
+      <option name="METHOD_NAME" value="testConvertV23v24_v2" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="TEST_SEARCH_SCOPE">
         <value defaultName="moduleWithDependencies" />
@@ -471,19 +449,19 @@
       <item itemvalue="JUnit.Issue180Test.testWriteIDv22AifForITunes12_6" />
       <item itemvalue="JUnit.AiffAudioTagTest.testReadAiff3" />
       <item itemvalue="JUnit.AiffAudioTagTest" />
-      <item itemvalue="JUnit.FlacWriteTest.testTagFieldKeyWrite" />
-      <item itemvalue="JUnit.WmaSimpleTest" />
-      <item itemvalue="JUnit.AsfKeyMappingTest" />
-      <item itemvalue="JUnit.M4aWriteTagTest.testTagFieldKeyWrite" />
-      <item itemvalue="JUnit.AsfKeyMappingTest.testTagFieldKeyMappingComplete" />
+      <item itemvalue="JUnit.FrameIPLSTest" />
+      <item itemvalue="JUnit.Issue335aTest.testConvertV23v24_v1" />
+      <item itemvalue="JUnit.Issue335aTest.testConvertV23v24_v2" />
+      <item itemvalue="JUnit.Issue335aTest" />
+      <item itemvalue="JUnit.FrameTIPLTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AsfKeyMappingTest.testTagFieldKeyMappingComplete" />
-        <item itemvalue="JUnit.M4aWriteTagTest.testTagFieldKeyWrite" />
-        <item itemvalue="JUnit.WmaSimpleTest" />
-        <item itemvalue="JUnit.AsfKeyMappingTest" />
-        <item itemvalue="JUnit.FlacWriteTest.testTagFieldKeyWrite" />
+        <item itemvalue="JUnit.FrameTIPLTest" />
+        <item itemvalue="JUnit.Issue335aTest" />
+        <item itemvalue="JUnit.FrameIPLSTest" />
+        <item itemvalue="JUnit.Issue335aTest.testConvertV23v24_v2" />
+        <item itemvalue="JUnit.Issue335aTest.testConvertV23v24_v1" />
       </list>
     </recent_temporary>
   </component>
@@ -502,27 +480,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1410537432863</updated>
-    </task>
-    <task id="LOCAL-00190" summary="Java 1.8">
-      <created>1567070847036</created>
-      <option name="number" value="00190" />
-      <option name="presentableId" value="LOCAL-00190" />
-      <option name="project" value="LOCAL" />
-      <updated>1567070847038</updated>
-    </task>
-    <task id="LOCAL-00191" summary="#297:Allow Wav files that are larger than 2GB">
-      <created>1567070915005</created>
-      <option name="number" value="00191" />
-      <option name="presentableId" value="LOCAL-00191" />
-      <option name="project" value="LOCAL" />
-      <updated>1567070915005</updated>
-    </task>
-    <task id="LOCAL-00192" summary="Reduced Debugging">
-      <created>1568788939504</created>
-      <option name="number" value="00192" />
-      <option name="presentableId" value="LOCAL-00192" />
-      <option name="project" value="LOCAL" />
-      <updated>1568788939504</updated>
     </task>
     <task id="LOCAL-00193" summary="testdata">
       <created>1569595481256</created>
@@ -846,7 +803,28 @@
       <option name="project" value="LOCAL" />
       <updated>1610630729370</updated>
     </task>
-    <option name="localTasksCounter" value="239" />
+    <task id="LOCAL-00239" summary="#333:For ID3 rename PRODUCER, ARRANGER, ENGINEER, DJMIXER and MIXER to PRODUCER_INVOLVEDPEOPLE etc that will continue to write to TIPL/IPLS">
+      <created>1610916644332</created>
+      <option name="number" value="00239" />
+      <option name="presentableId" value="LOCAL-00239" />
+      <option name="project" value="LOCAL" />
+      <updated>1610916644332</updated>
+    </task>
+    <task id="LOCAL-00240" summary="#334:Remove INVOLVEDPEOPLE mappings such as PRODUCER_INVOLVED PEOPLE and simplify logic">
+      <created>1611079988697</created>
+      <option name="number" value="00240" />
+      <option name="presentableId" value="LOCAL-00240" />
+      <option name="project" value="LOCAL" />
+      <updated>1611079988697</updated>
+    </task>
+    <task id="LOCAL-00241" summary="More tests for TMCL/IPLS/TIPL">
+      <created>1611081568769</created>
+      <option name="number" value="00241" />
+      <option name="presentableId" value="LOCAL-00241" />
+      <option name="project" value="LOCAL" />
+      <updated>1611081568769</updated>
+    </task>
+    <option name="localTasksCounter" value="242" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -924,9 +902,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Reverted back" />
-    <MESSAGE value="Added more uptodate javdoc libs" />
-    <MESSAGE value="Fix Javadoc for Java 11" />
     <MESSAGE value="Fixes so works with Java 11 (as well as Java 8)" />
     <MESSAGE value="Remove unneccessary imports" />
     <MESSAGE value="#308:corrupt audio files after fix" />
@@ -949,53 +924,56 @@
     <MESSAGE value="oops" />
     <MESSAGE value="#332:Add support for Roon LIVE field" />
     <MESSAGE value="Added Taggers using fields" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Taggers using fields" />
+    <MESSAGE value="#333:For ID3 rename PRODUCER, ARRANGER, ENGINEER, DJMIXER and MIXER to PRODUCER_INVOLVEDPEOPLE etc that will continue to write to TIPL/IPLS" />
+    <MESSAGE value="#334:Remove INVOLVEDPEOPLE mappings such as PRODUCER_INVOLVED PEOPLE and simplify logic" />
+    <MESSAGE value="More tests for TMCL/IPLS/TIPL" />
+    <option name="LAST_COMMIT_MESSAGE" value="More tests for TMCL/IPLS/TIPL" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="92" y="92" width="1736" height="856" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1610180192816">
+    <state x="92" y="92" width="1736" height="856" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1611076697077">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="92" y="92" width="1736" height="856" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1610180192816" />
-    <state x="629" y="114" key="CommitChangelistDialog2" timestamp="1610916461328">
+    <state x="92" y="92" width="1736" height="856" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1611076697077" />
+    <state x="629" y="114" key="CommitChangelistDialog2" timestamp="1611086113656">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="629" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1610916461328" />
-    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1610906107963">
+    <state x="629" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1611086113656" />
+    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1611085214911">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1610906107963" />
-    <state width="1877" height="363" key="GridCell.Tab.0.bottom" timestamp="1610914335374">
+    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1611085214911" />
+    <state width="1877" height="267" key="GridCell.Tab.0.bottom" timestamp="1611086086887">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="363" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1610914335374" />
-    <state width="1877" height="363" key="GridCell.Tab.0.center" timestamp="1610914335373">
+    <state width="1877" height="267" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1611086086887" />
+    <state width="1877" height="267" key="GridCell.Tab.0.center" timestamp="1611086086886">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="363" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1610914335373" />
-    <state width="1877" height="363" key="GridCell.Tab.0.left" timestamp="1610914335373">
+    <state width="1877" height="267" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1611086086886" />
+    <state width="1877" height="267" key="GridCell.Tab.0.left" timestamp="1611086086886">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="363" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1610914335373" />
-    <state width="1877" height="363" key="GridCell.Tab.0.right" timestamp="1610914335373">
+    <state width="1877" height="267" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1611086086886" />
+    <state width="1877" height="267" key="GridCell.Tab.0.right" timestamp="1611086086887">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="363" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1610914335373" />
+    <state width="1877" height="267" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1611086086887" />
     <state x="746" y="231" key="RollbackChangesDialog" timestamp="1610878668606">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="746" y="231" key="RollbackChangesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1610878668606" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1610630731746">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1611081571765">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1610630731746" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1611081571765" />
     <state x="656" y="252" width="607" height="536" key="find.popup" timestamp="1610182898218">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="656" y="252" width="607" height="536" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1610182898218" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1610916470236">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1611086054553">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1610916470236" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1611086054553" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1012,7 +990,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/org/jaudiotagger/tag/id3/AbstractID3v2Tag.java</url>
-          <line>2282</line>
+          <line>2283</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
