@@ -193,6 +193,7 @@ public class ID3v24Frames extends ID3Frames
         supportedFrames.add(FRAME_ID_MOVEMENT_NO);
         supportedFrames.add(FRAME_ID_MPEG_LOCATION_LOOKUP_TABLE);
         supportedFrames.add(FRAME_ID_MUSIC_CD_ID);
+        supportedFrames.add(FRAME_ID_MUSICIAN_CREDITS);
         supportedFrames.add(FRAME_ID_ORIGARTIST);
         supportedFrames.add(FRAME_ID_ORIGINAL_RELEASE_TIME);
         supportedFrames.add(FRAME_ID_ORIG_FILENAME);
