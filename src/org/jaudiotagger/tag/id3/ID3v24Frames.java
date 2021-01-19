@@ -392,7 +392,6 @@ public class ID3v24Frames extends ID3Frames
         tagFieldToId3.put(FieldKey.ALBUM_YEAR, ID3v24FieldKey.ALBUM_YEAR);
         tagFieldToId3.put(FieldKey.AMAZON_ID, ID3v24FieldKey.AMAZON_ID);
         tagFieldToId3.put(FieldKey.ARRANGER, ID3v24FieldKey.ARRANGER);
-        tagFieldToId3.put(FieldKey.ARRANGER_INVOLVEDPEOPLE, ID3v24FieldKey.ARRANGER_INVOLVEDPEOPLE);
         tagFieldToId3.put(FieldKey.ARRANGER_SORT, ID3v24FieldKey.ARRANGER_SORT);
         tagFieldToId3.put(FieldKey.ARTIST, ID3v24FieldKey.ARTIST);
         tagFieldToId3.put(FieldKey.ARTISTS, ID3v24FieldKey.ARTISTS);
@@ -423,12 +422,10 @@ public class ID3v24Frames extends ID3Frames
         tagFieldToId3.put(FieldKey.DISC_TOTAL, ID3v24FieldKey.DISC_NO);
         tagFieldToId3.put(FieldKey.DJMIXER, ID3v24FieldKey.DJMIXER);
         tagFieldToId3.put(FieldKey.DJMIXER_SORT, ID3v24FieldKey.DJMIXER_SORT);
-        tagFieldToId3.put(FieldKey.DJMIXER_INVOLVEDPEOPLE, ID3v24FieldKey.DJMIXER_INVOLVEDPEOPLE);
         tagFieldToId3.put(FieldKey.MOOD_ELECTRONIC, ID3v24FieldKey.MOOD_ELECTRONIC);
         tagFieldToId3.put(FieldKey.ENCODER, ID3v24FieldKey.ENCODER);
         tagFieldToId3.put(FieldKey.ENGINEER, ID3v24FieldKey.ENGINEER);
         tagFieldToId3.put(FieldKey.ENGINEER_SORT, ID3v24FieldKey.ENGINEER_SORT);
-        tagFieldToId3.put(FieldKey.ENGINEER_INVOLVEDPEOPLE, ID3v24FieldKey.ENGINEER_INVOLVEDPEOPLE);
         tagFieldToId3.put(FieldKey.ENSEMBLE, ID3v24FieldKey.ENSEMBLE);
         tagFieldToId3.put(FieldKey.ENSEMBLE_SORT, ID3v24FieldKey.ENSEMBLE_SORT);
         tagFieldToId3.put(FieldKey.FBPM, ID3v24FieldKey.FBPM);
@@ -455,7 +452,6 @@ public class ID3v24Frames extends ID3Frames
         tagFieldToId3.put(FieldKey.MEDIA, ID3v24FieldKey.MEDIA);
         tagFieldToId3.put(FieldKey.MIXER, ID3v24FieldKey.MIXER);
         tagFieldToId3.put(FieldKey.MIXER_SORT, ID3v24FieldKey.MIXER_SORT);
-        tagFieldToId3.put(FieldKey.MIXER_INVOLVEDPEOPLE, ID3v24FieldKey.MIXER);
         tagFieldToId3.put(FieldKey.MOOD, ID3v24FieldKey.MOOD);
         tagFieldToId3.put(FieldKey.MOOD_ACOUSTIC, ID3v24FieldKey.MOOD_ACOUSTIC);
         tagFieldToId3.put(FieldKey.MOOD_AGGRESSIVE, ID3v24FieldKey.MOOD_AGGRESSIVE);
@@ -511,7 +507,6 @@ public class ID3v24Frames extends ID3Frames
         tagFieldToId3.put(FieldKey.PERIOD, ID3v24FieldKey.PERIOD);
         tagFieldToId3.put(FieldKey.PRODUCER, ID3v24FieldKey.PRODUCER);
         tagFieldToId3.put(FieldKey.PRODUCER_SORT, ID3v24FieldKey.PRODUCER_SORT);
-        tagFieldToId3.put(FieldKey.PRODUCER_INVOLVEDPEOPLE, ID3v24FieldKey.PRODUCER_INVOLVEDPEOPLE);
         tagFieldToId3.put(FieldKey.QUALITY, ID3v24FieldKey.QUALITY);
         tagFieldToId3.put(FieldKey.RANKING, ID3v24FieldKey.RANKING);
         tagFieldToId3.put(FieldKey.RATING, ID3v24FieldKey.RATING);

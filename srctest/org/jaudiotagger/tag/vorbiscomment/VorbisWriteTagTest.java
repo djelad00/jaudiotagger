@@ -844,7 +844,7 @@ public class VorbisWriteTagTest extends AbstractTestCase
                 Tag tag = f.getTag();
                 for (FieldKey key : FieldKey.values())
                 {
-                    if (!(key == FieldKey.COVER_ART) && !(key == FieldKey.ITUNES_GROUPING) && !(key.isInvolvedPeopleField()))
+                    if (!(key == FieldKey.COVER_ART) && !(key == FieldKey.ITUNES_GROUPING))
                     {
                         System.out.println(key);
                         tag.setField(tag.createField(key, key.name() + "_value_" + i));
@@ -858,7 +858,7 @@ public class VorbisWriteTagTest extends AbstractTestCase
                     /*
                      * Test value retrieval, using multiple access methods.
                      */
-                    if (!(key == FieldKey.COVER_ART) && !(key == FieldKey.ITUNES_GROUPING) && !(key.isInvolvedPeopleField()))
+                    if (!(key == FieldKey.COVER_ART) && !(key == FieldKey.ITUNES_GROUPING))
                     {
                         String value = key.name() + "_value_" + i;
                         System.out.println("Value is:" + value);

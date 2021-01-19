@@ -2446,7 +2446,7 @@ public class M4aWriteTagTest extends TestCase
                 Tag tag = f.getTag();
                 for (FieldKey key : FieldKey.values())
                 {
-                    if (!(key == FieldKey.COVER_ART) && !(key == FieldKey.ITUNES_GROUPING) && !(key.isInvolvedPeopleField()))
+                    if (!(key == FieldKey.COVER_ART) && !(key == FieldKey.ITUNES_GROUPING))
                     {
                         System.out.println("Writing:" + key);
 
@@ -2468,7 +2468,7 @@ public class M4aWriteTagTest extends TestCase
                     /*
                      * Test value retrieval, using multiple access methods.
                      */
-                    if (!(key == FieldKey.COVER_ART) && !(key == FieldKey.ITUNES_GROUPING) && !(key.isInvolvedPeopleField()))
+                    if (!(key == FieldKey.COVER_ART) && !(key == FieldKey.ITUNES_GROUPING))
                     {
                         System.out.println("Reading:" + key);
                         String value = String.valueOf(i);

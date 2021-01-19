@@ -372,6 +372,7 @@ public class ID3v24Tag extends AbstractID3v2Tag
 
     /**
      * Convert frame into ID3v24 frame(s)
+     *
      * @param frame
      * @return
      * @throws InvalidFrameException
