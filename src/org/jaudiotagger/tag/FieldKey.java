@@ -6,8 +6,6 @@ package org.jaudiotagger.tag;
  * This enumeration is used by subclasses to map from the common key to their implementation key, the keys
  * are grouped within EnumSets within Tag class.
  *
- * For ID3 the XXX_INVOLVEDPEOPLE fields essentially add a convenience for saving the role to the IPLS/TIPL field
- * without having to interact directly with this frame
  */
 public enum FieldKey
 {
