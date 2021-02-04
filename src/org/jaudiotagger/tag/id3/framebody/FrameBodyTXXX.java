@@ -155,6 +155,8 @@ public class FrameBodyTXXX extends AbstractFrameBodyTextInfo implements ID3v24Fr
     public static final String RECORDINGENDDATE                         = "RECORDINGENDDATE";
     public static final String RECORDINGLOCATION                        = "RECORDINGLOCATION";
     public static final String REMIXER                                  = "REMIXER";
+    public static final String ROONALBUMTAG                             = "ROONALBUMTAG";
+    public static final String ROONTRACKTAG                             = "ROONTRACKTAG";
     public static final String SCRIPT                                   = "SCRIPT";
     public static final String SECTION                                  = "SECTION";
     public static final String SINGLE_DISC_TRACK_NO                     = "SINGLE_DISC_TRACK_NO";

@@ -193,6 +193,8 @@ public class VorbisCommentTag extends AbstractTag
         tagFieldToOggField.put(FieldKey.RECORDINGSTARTDATE, VorbisCommentFieldKey.RECORDINGSTARTDATE);
         tagFieldToOggField.put(FieldKey.RECORDINGENDDATE, VorbisCommentFieldKey.RECORDINGENDDATE);
         tagFieldToOggField.put(FieldKey.REMIXER, VorbisCommentFieldKey.REMIXER);
+        tagFieldToOggField.put(FieldKey.ROONALBUMTAG, VorbisCommentFieldKey.ROONALBUMTAG);
+        tagFieldToOggField.put(FieldKey.ROONTRACKTAG, VorbisCommentFieldKey.ROONTRACKTAG);
         tagFieldToOggField.put(FieldKey.SCRIPT, VorbisCommentFieldKey.SCRIPT);
         tagFieldToOggField.put(FieldKey.SECTION, VorbisCommentFieldKey.SECTION);
         tagFieldToOggField.put(FieldKey.SINGLE_DISC_TRACK_NO, VorbisCommentFieldKey.SINGLE_DISC_TRACK_NO);

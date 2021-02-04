@@ -209,6 +209,8 @@ public enum AsfFieldKey
     RECORDINGENDDATE("RECORDINGENDDATE", false),
     RECORDINGLOCATION("RECORDINGLOCATION", false),
     REMIXER("WM/ModifiedBy", false),
+    ROONALBUMTAG("ROONALBUMTAG", false),
+    ROONTRACKTAG("ROONTRACKTAG", false),
     SCRIPT("WM/Script", false),
     SECTION("SECTION", false),
     SINGLE_DISC_TRACK_NO("SINGLE_DISC_TRACK_NO",true),

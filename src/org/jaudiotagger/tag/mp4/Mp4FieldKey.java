@@ -216,6 +216,8 @@ public enum Mp4FieldKey
     RECORDINGLOCATION("com.apple.iTunes","RECORDINGLOCATION",  TEXT, Tagger.ROON),
     RELEASECOUNTRY("com.apple.iTunes", "MusicBrainz Album Release Country", TEXT, Tagger.PICARD),
     REMIXER("com.apple.iTunes", "REMIXER", TEXT, Tagger.PICARD),
+    ROONALBUMTAG("com.apple.iTunes", "ROONALBUMTAG", TEXT, Tagger.ROON),
+    ROONTRACKTAG("com.apple.iTunes", "ROONTRACKTAG", TEXT, Tagger.ROON),
     SCORE("rate",Mp4TagFieldSubType.TEXT, TEXT, Tagger.MEDIA_MONKEY),    //As in mark out of 100
     SCRIPT("com.apple.iTunes", "SCRIPT", TEXT, Tagger.JAIKOZ),
     SF_ID("sfID",Mp4TagFieldSubType.UNKNOWN, INTEGER, 4),

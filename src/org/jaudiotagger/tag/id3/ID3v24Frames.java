@@ -517,6 +517,8 @@ public class ID3v24Frames extends ID3Frames
         tagFieldToId3.put(FieldKey.RECORDINGENDDATE, ID3v24FieldKey.RECORDINGENDDATE);
         tagFieldToId3.put(FieldKey.RECORDINGLOCATION, ID3v24FieldKey.RECORDINGLOCATION);
         tagFieldToId3.put(FieldKey.REMIXER, ID3v24FieldKey.REMIXER);
+        tagFieldToId3.put(FieldKey.ROONALBUMTAG, ID3v24FieldKey.ROONALBUMTAG);
+        tagFieldToId3.put(FieldKey.ROONTRACKTAG, ID3v24FieldKey.ROONTRACKTAG);
         tagFieldToId3.put(FieldKey.SCRIPT, ID3v24FieldKey.SCRIPT);
         tagFieldToId3.put(FieldKey.SECTION, ID3v24FieldKey.SECTION);
         tagFieldToId3.put(FieldKey.SINGLE_DISC_TRACK_NO, ID3v24FieldKey.SINGLE_DISC_TRACK_NO);

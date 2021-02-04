@@ -177,6 +177,8 @@ public enum VorbisCommentFieldKey
     RECORDINGLOCATION("RECORDINGLOCATION",EnumSet.of(Tagger.ROON)),
     RELEASECOUNTRY("RELEASECOUNTRY",EnumSet.of(Tagger.PICARD,Tagger.JAIKOZ)),
     REMIXER("REMIXER",EnumSet.of(Tagger.PICARD,Tagger.JAIKOZ)),
+    ROONALBUMTAG("ROONALBUMTAG",EnumSet.of(Tagger.ROON)),
+    ROONTRACKTAG("ROONTRACKTAG",EnumSet.of(Tagger.ROON)),
     SCRIPT("SCRIPT",EnumSet.of(Tagger.JAIKOZ)),
     SECTION("SECTION",EnumSet.of(Tagger.ROON)),
     SINGLE_DISC_TRACK_NO("SINGLE_DISC_TRACK_NO",EnumSet.of(Tagger.JAIKOZ)),
