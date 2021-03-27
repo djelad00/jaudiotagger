@@ -132,12 +132,18 @@ public class MetadataBlockDataPicture implements MetadataBlockData, TagField
      */
     public MetadataBlockDataPicture(MetadataBlockHeader header, FileChannel fc ) throws IOException, InvalidFrameException
     {
+        if (header.getDataLength()==0)
+        {
+            throw new IOException("MetadataBlockDataPicture HeaderDataSize is zero");
+        }
+
         ByteBuffer rawdata = ByteBuffer.allocate(header.getDataLength());
         int bytesRead = fc.read(rawdata);
         if (bytesRead < header.getDataLength())
         {
             throw new IOException("Unable to read required number of databytes read:" + bytesRead + ":required:" + header.getDataLength());
         }
+
         rawdata.rewind();
         initFromByteBuffer(rawdata);
 
