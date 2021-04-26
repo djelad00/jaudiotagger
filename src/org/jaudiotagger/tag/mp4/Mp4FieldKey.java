@@ -108,6 +108,7 @@ public enum Mp4FieldKey
     IS_SOUNDTRACK("com.apple.iTunes", "IS_SOUNDTRACK", TEXT, Tagger.JAIKOZ),
     ITUNES_NORM("com.apple.iTunes", "iTunNORM", TEXT),
     ITUNES_SMPB("com.apple.iTunes", "iTunSMPB", TEXT),
+    JAIKOZ_ID("com.apple.iTunes","JAIKOZ_ID",  TEXT, Tagger.JAIKOZ),
     KEY("com.apple.iTunes", "initialkey", TEXT),
     KEYS("keys",Mp4TagFieldSubType.TEXT,TEXT),
     KEYWORD("keyw",Mp4TagFieldSubType.TEXT, TEXT),

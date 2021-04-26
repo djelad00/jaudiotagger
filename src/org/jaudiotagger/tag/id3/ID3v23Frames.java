@@ -443,6 +443,7 @@ public class ID3v23Frames extends ID3Frames
         tagFieldToId3.put(FieldKey.IS_LIVE, ID3v23FieldKey.IS_LIVE);
         tagFieldToId3.put(FieldKey.IS_SOUNDTRACK, ID3v23FieldKey.IS_SOUNDTRACK);
         tagFieldToId3.put(FieldKey.ITUNES_GROUPING, ID3v23FieldKey.ITUNES_GROUPING);
+        tagFieldToId3.put(FieldKey.JAIKOZ_ID, ID3v23FieldKey.JAIKOZ_ID);
         tagFieldToId3.put(FieldKey.KEY, ID3v23FieldKey.KEY);
         tagFieldToId3.put(FieldKey.LANGUAGE, ID3v23FieldKey.LANGUAGE);
         tagFieldToId3.put(FieldKey.LYRICIST, ID3v23FieldKey.LYRICIST);

@@ -86,6 +86,7 @@ public enum VorbisCommentFieldKey
     IS_HD("IS_HD",EnumSet.of(Tagger.PICARD,Tagger.JAIKOZ)),
     IS_LIVE("LIVE",EnumSet.of(Tagger.ROON)),
     IS_SOUNDTRACK("IS_SOUNDTRACK",EnumSet.of(Tagger.PICARD,Tagger.JAIKOZ)),
+    JAIKOZ_ID("JAIKOZ_ID",EnumSet.of(Tagger.JAIKOZ)),
     KEY("KEY"),
     LABEL("LABEL",EnumSet.of(Tagger.PICARD,Tagger.JAIKOZ,Tagger.ROON)),
     LANGUAGE("LANGUAGE"),

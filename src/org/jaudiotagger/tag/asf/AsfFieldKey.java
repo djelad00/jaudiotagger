@@ -125,6 +125,7 @@ public enum AsfFieldKey
     IS_HD("IS_HD", false),
     IS_LIVE("LIVE", false),
     IS_SOUNDTRACK("IS_SOUNDTRACK", false),
+    JAIKOZ_ID("JAIKOZ_ID", false),
     LANGUAGE("WM/Language", true),
     LYRICIST("WM/Writer", true),
     LYRICIST_SORT("LYRICIST_SORT", true),

@@ -149,6 +149,7 @@ public final class AsfTag extends AbstractTag
         tagFieldToAsfField.put(FieldKey.IS_HD, AsfFieldKey.IS_HD);
         tagFieldToAsfField.put(FieldKey.IS_LIVE, AsfFieldKey.IS_LIVE);
         tagFieldToAsfField.put(FieldKey.IS_SOUNDTRACK, AsfFieldKey.IS_SOUNDTRACK);
+        tagFieldToAsfField.put(FieldKey.JAIKOZ_ID, AsfFieldKey.JAIKOZ_ID);
         tagFieldToAsfField.put(FieldKey.KEY, AsfFieldKey.INITIAL_KEY);
         tagFieldToAsfField.put(FieldKey.LANGUAGE, AsfFieldKey.LANGUAGE);
         tagFieldToAsfField.put(FieldKey.LYRICIST, AsfFieldKey.LYRICIST);

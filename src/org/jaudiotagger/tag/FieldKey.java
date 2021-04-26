@@ -71,6 +71,7 @@ public enum FieldKey
     IS_SOUNDTRACK,
     IS_COMPILATION,
     ITUNES_GROUPING,
+    JAIKOZ_ID,
     KEY,
     LANGUAGE,
     LYRICIST,
