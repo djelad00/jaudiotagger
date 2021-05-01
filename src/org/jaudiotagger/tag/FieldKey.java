@@ -3,10 +3,9 @@ package org.jaudiotagger.tag;
 /**
  * This is an enumeration of fields implemented by all major formats
  *
- *
- *
  * This enumeration is used by subclasses to map from the common key to their implementation key, the keys
  * are grouped within EnumSets within Tag class.
+ *
  */
 public enum FieldKey
 {
@@ -18,6 +17,7 @@ public enum FieldKey
     ALBUM_ARTISTS,
     ALBUM_ARTISTS_SORT,
     ALBUM_SORT,
+    ALBUM_YEAR,
     AMAZON_ID,
     ARRANGER,
     ARRANGER_SORT,
@@ -49,8 +49,10 @@ public enum FieldKey
     DISC_SUBTITLE,
     DISC_TOTAL,
     DJMIXER,
+    DJMIXER_SORT,
     ENCODER,
     ENGINEER,
+    ENGINEER_SORT,
     ENSEMBLE,
     ENSEMBLE_SORT,
     FBPM,
@@ -58,16 +60,18 @@ public enum FieldKey
     GROUP,
     GROUPING,
     INSTRUMENT,
-    INVOLVED_PERSON,
+    INVOLVEDPEOPLE,
     IPI,
     ISRC,
     ISWC,
     IS_CLASSICAL,
     IS_GREATEST_HITS,
     IS_HD,
+    IS_LIVE,
     IS_SOUNDTRACK,
     IS_COMPILATION,
     ITUNES_GROUPING,
+    JAIKOZ_ID,
     KEY,
     LANGUAGE,
     LYRICIST,
@@ -75,6 +79,7 @@ public enum FieldKey
     LYRICS,
     MEDIA,
     MIXER,
+    MIXER_SORT,
     MOOD,
     MOOD_ACOUSTIC,
     MOOD_AGGRESSIVE,
@@ -129,6 +134,7 @@ public enum FieldKey
     ORCHESTRA,
     ORCHESTRA_SORT,
     ORIGINAL_ALBUM,
+    ORIGINALRELEASEDATE,
     ORIGINAL_ARTIST,
     ORIGINAL_LYRICIST,
     ORIGINAL_YEAR,
@@ -141,13 +147,22 @@ public enum FieldKey
     PERFORMER_NAME_SORT,
     PERIOD,
     PRODUCER,
+    PRODUCER_SORT,
     QUALITY,
     RANKING,
     RATING,
     RECORD_LABEL,
+    RECORDINGDATE,
+    RECORDINGSTARTDATE,
+    RECORDINGENDDATE,
+    RECORDINGLOCATION,
     REMIXER,
+    ROONALBUMTAG,
+    ROONTRACKTAG,
+    SECTION,
     SCRIPT,
     SINGLE_DISC_TRACK_NO,
+    SONGKONG_ID,
     SUBTITLE,
     TAGS,
     TEMPO,
@@ -168,5 +183,6 @@ public enum FieldKey
     WORK,
     WORK_TYPE,
     YEAR,
+    VERSION
     ;
 }

@@ -263,4 +263,32 @@ public class FlacReadTest extends TestCase
         }
         assertNull(exceptionCaught);
     }
+
+    public void testReadWriteFlac()
+    {
+        Exception exceptionCaught = null;
+        try
+        {
+            File orig = new File("testdata", "test614.flac");
+            if (!orig.isFile())
+            {
+                System.out.println("Test cannot be run because test file not available");
+                return;
+            }
+            File testFile = AbstractTestCase.copyAudioToTmp("test614.flac", new File("test614.flac"));
+            AudioFile f = AudioFileIO.read(testFile);
+            assertEquals("",f.getTag().getFirst(FieldKey.YEAR));
+            f.getTag().setField(FieldKey.YEAR, "1901");
+            f.commit();
+            f = AudioFileIO.read(testFile);
+            assertEquals("1901",f.getTag().getFirst(FieldKey.YEAR));
+            System.out.println(f);
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+            exceptionCaught = e;
+        }
+        assertNull(exceptionCaught);
+    }
 }

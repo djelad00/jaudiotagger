@@ -6,6 +6,7 @@ import org.jaudiotagger.audio.AudioFileIO;
 import org.jaudiotagger.audio.ogg.OggFileReader;
 import org.jaudiotagger.audio.ogg.util.OggPageHeader;
 import org.jaudiotagger.tag.FieldKey;
+import org.jaudiotagger.tag.Tag;
 import org.jaudiotagger.tag.TagField;
 import org.jaudiotagger.tag.TagOptionSingleton;
 import org.jaudiotagger.tag.vorbiscomment.util.Base64Coder;
@@ -824,5 +825,59 @@ public class VorbisWriteTagTest extends AbstractTestCase
         tagFields = f.getTag().getFields(FieldKey.ALBUM_ARTIST_SORT);
         assertEquals(0,tagFields.size());
 
+    }
+
+    public void testTagFieldKeyWrite()
+    {
+        Exception exceptionCaught = null;
+        try
+        {
+            File testFile = AbstractTestCase.copyAudioToTmp("test.ogg", new File("testwrite1.ogg"));
+
+            AudioFile f = AudioFileIO.read(testFile);
+            AudioFileIO.delete(f);
+
+            // Tests multiple iterations on same file
+            for (int i = 0; i < 2; i++)
+            {
+                f = AudioFileIO.read(testFile);
+                Tag tag = f.getTag();
+                for (FieldKey key : FieldKey.values())
+                {
+                    if (!(key == FieldKey.COVER_ART) && !(key == FieldKey.ITUNES_GROUPING))
+                    {
+                        System.out.println(key);
+                        tag.setField(tag.createField(key, key.name() + "_value_" + i));
+                    }
+                }
+                f.commit();
+                f = AudioFileIO.read(testFile);
+                tag = f.getTag();
+                for (FieldKey key : FieldKey.values())
+                {
+                    /*
+                     * Test value retrieval, using multiple access methods.
+                     */
+                    if (!(key == FieldKey.COVER_ART) && !(key == FieldKey.ITUNES_GROUPING))
+                    {
+                        String value = key.name() + "_value_" + i;
+                        System.out.println("Value is:" + value);
+
+                        assertEquals(value, tag.getFirst(key));
+                        VorbisCommentTagField atf =  (VorbisCommentTagField)tag.getFields(key).get(0);
+                        assertEquals(value, atf.getContent());
+                        atf = (VorbisCommentTagField) tag.getFields(key).get(0);
+                        assertEquals(value, atf.getContent());
+                    }
+
+                }
+            }
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+            exceptionCaught = e;
+        }
+        assertNull(exceptionCaught);
     }
 }

@@ -372,6 +372,7 @@ public class ID3v24Tag extends AbstractID3v2Tag
 
     /**
      * Convert frame into ID3v24 frame(s)
+     *
      * @param frame
      * @return
      * @throws InvalidFrameException
@@ -407,15 +408,22 @@ public class ID3v24Tag extends AbstractID3v2Tag
                     pairsTipl.add(next);
                 }
             }
-            AbstractID3v2Frame tipl = new ID3v24Frame((ID3v23Frame)frame,ID3v24Frames.FRAME_ID_INVOLVED_PEOPLE);
-            FrameBodyTIPL tiplBody  = new FrameBodyTIPL(frame.getBody().getTextEncoding(),pairsTipl);
-            tipl.setBody(tiplBody);
-            frames.add(tipl);
 
-            AbstractID3v2Frame tmcl = new ID3v24Frame((ID3v23Frame)frame,ID3v24Frames.FRAME_ID_MUSICIAN_CREDITS);
-            FrameBodyTMCL tmclBody  = new FrameBodyTMCL(frame.getBody().getTextEncoding(),pairsTmcl);
-            tmcl.setBody(tmclBody);
-            frames.add(tmcl);
+            if(pairsTipl.size()>0)
+            {
+                AbstractID3v2Frame tipl = new ID3v24Frame((ID3v23Frame) frame, ID3v24Frames.FRAME_ID_INVOLVED_PEOPLE);
+                FrameBodyTIPL tiplBody = new FrameBodyTIPL(frame.getBody().getTextEncoding(), pairsTipl);
+                tipl.setBody(tiplBody);
+                frames.add(tipl);
+            }
+
+            if(pairsTmcl.size()>0)
+            {
+                AbstractID3v2Frame tmcl = new ID3v24Frame((ID3v23Frame) frame, ID3v24Frames.FRAME_ID_MUSICIAN_CREDITS);
+                FrameBodyTMCL tmclBody = new FrameBodyTMCL(frame.getBody().getTextEncoding(), pairsTmcl);
+                tmcl.setBody(tmclBody);
+                frames.add(tmcl);
+            }
         }
         else
         {

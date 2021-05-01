@@ -2146,7 +2146,18 @@ public abstract class AbstractID3v2Tag extends AbstractID3Tag implements Tag
         }
         else if (frame.getBody() instanceof FrameBodyTIPL)
         {
-            ((FrameBodyTIPL) (frame.getBody())).addPair(formatKey.getSubId(), value);
+            if(formatKey.getSubId()!=null)
+            {
+                ((FrameBodyTIPL) (frame.getBody())).addPair(formatKey.getSubId(), value);
+            }
+            else if(values.length>=2)
+            {
+                ((FrameBodyTIPL) (frame.getBody())).addPair(values[0], values[1]);
+            }
+            else
+            {
+                ((FrameBodyTIPL) (frame.getBody())).addPair(values[0]);
+            }
         }
         else if (frame.getBody() instanceof FrameBodyTMCL)
         {
@@ -2244,7 +2255,7 @@ public abstract class AbstractID3v2Tag extends AbstractID3Tag implements Tag
         }
         //Special handling for paired fields with no defined key
         else if ((formatKey.getGenericKey()!=null)&&
-                 ((formatKey.getGenericKey() == FieldKey.PERFORMER)||(formatKey.getGenericKey() == FieldKey.INVOLVED_PERSON))
+                 (formatKey.getGenericKey() == FieldKey.INVOLVEDPEOPLE)
                 )
         {
             List<TagField> list = getFields(formatKey.getFrameId());
@@ -2256,7 +2267,8 @@ public abstract class AbstractID3v2Tag extends AbstractID3Tag implements Tag
                 {
                     for (Pair entry : ((AbstractFrameBodyPairs) next).getPairing().getMapping())
                     {
-                        if(!StandardIPLSKey.isKey(entry.getKey()))
+                        //if(!StandardIPLSKey.isKey(entry.getKey()))
+                        if(true)
                         {
                             if (!entry.getValue().isEmpty())
                             {
@@ -2515,77 +2527,9 @@ public abstract class AbstractID3v2Tag extends AbstractID3Tag implements Tag
                         }
                     }
                 }
-                //A single TIPL frame is used for multiple fields, so we just delete the matching pairs rather than
-                //deleting the frame itself unless now empty
-                else if (next instanceof FrameBodyTIPL)
-                {
-                    PairedTextEncodedStringNullTerminated.ValuePairs pairs = ((FrameBodyTIPL) next).getPairing();
-                    ListIterator<Pair> pairIterator = pairs.getMapping().listIterator();
-                    while (pairIterator.hasNext())
-                    {
-                        Pair nextPair = pairIterator.next();
-                        if (nextPair.getKey().equals(formatKey.getSubId()))
-                        {
-                            pairIterator.remove();
-                        }
-                    }
-                    if (pairs.getMapping().size() == 0)
-                    {
-                        removeFrame(formatKey.getFrameId());
-                    }
-                }
-                //A single IPLS frame is used for multiple fields, so we just delete the matching pairs rather than
-                //deleting the frame itself unless now empty 
-                else if (next instanceof FrameBodyIPLS)
-                {
-                    PairedTextEncodedStringNullTerminated.ValuePairs pairs = ((FrameBodyIPLS) next).getPairing();
-                    ListIterator<Pair> pairIterator = pairs.getMapping().listIterator();
-                    while (pairIterator.hasNext())
-                    {
-                        Pair nextPair = pairIterator.next();
-                        if (nextPair.getKey().equals(formatKey.getSubId()))
-                        {
-                            pairIterator.remove();
-                        }
-                    }
-
-                    if (pairs.getMapping().size() == 0)
-                    {
-                        removeFrame(formatKey.getFrameId());
-                    }
-                }
                 else
                 {
                     throw new RuntimeException("Need to implement getFields(FieldKey genericKey) for:" + next.getClass());
-                }
-            }
-        }
-        else if ((formatKey.getGenericKey()!=null) &&
-                 ((formatKey.getGenericKey() == FieldKey.PERFORMER) || (formatKey.getGenericKey() == FieldKey.INVOLVED_PERSON))
-                )
-        {
-            List<TagField> list = getFields(formatKey.getFrameId());
-            ListIterator<TagField> li = list.listIterator();
-            while (li.hasNext())
-            {
-                AbstractTagFrameBody next = ((AbstractID3v2Frame) li.next()).getBody();
-                if (next instanceof AbstractFrameBodyPairs)
-                {
-                    PairedTextEncodedStringNullTerminated.ValuePairs pairs = ((AbstractFrameBodyPairs) next).getPairing();
-                    ListIterator<Pair> pairIterator = pairs.getMapping().listIterator();
-                    while (pairIterator.hasNext())
-                    {
-                        Pair nextPair = pairIterator.next();
-                        if(!StandardIPLSKey.isKey(nextPair.getKey()))
-                        {
-                            pairIterator.remove();
-                        }
-                    }
-
-                    if (pairs.getMapping().size() == 0)
-                    {
-                        removeFrame(formatKey.getFrameId());
-                    }
                 }
             }
         }

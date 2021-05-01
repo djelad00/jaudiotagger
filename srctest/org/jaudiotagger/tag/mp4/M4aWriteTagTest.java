@@ -5,13 +5,12 @@ import org.jaudiotagger.AbstractTestCase;
 import org.jaudiotagger.audio.AudioFile;
 import org.jaudiotagger.audio.AudioFileIO;
 import org.jaudiotagger.audio.mp4.Mp4AtomTree;
-import org.jaudiotagger.tag.FieldKey;
-import org.jaudiotagger.tag.Tag;
-import org.jaudiotagger.tag.TagField;
-import org.jaudiotagger.tag.TagOptionSingleton;
+import org.jaudiotagger.tag.*;
 import org.jaudiotagger.tag.mp4.atom.Mp4ContentTypeValue;
 import org.jaudiotagger.tag.mp4.atom.Mp4RatingValue;
 import org.jaudiotagger.tag.mp4.field.*;
+import org.jaudiotagger.tag.reference.GenreTypes;
+import org.jaudiotagger.tag.vorbiscomment.VorbisCommentTagField;
 
 import java.io.File;
 import java.io.IOException;
@@ -2425,6 +2424,86 @@ public class M4aWriteTagTest extends TestCase
         f = AudioFileIO.read(testFile);
         tagFields = f.getTag().getFields(FieldKey.ALBUM_ARTIST_SORT);
         assertEquals(0,tagFields.size());
+    }
+
+    /**
+     * Just create fields for all the tag field keys defined, se if we hit any problems
+     */
+    public void testTagFieldKeyWrite()
+    {
+        Exception exceptionCaught = null;
+        try
+        {
+            File testFile = AbstractTestCase.copyAudioToTmp("test.m4a", new File("testwrite1.m4a"));
+
+            AudioFile f = AudioFileIO.read(testFile);
+            AudioFileIO.delete(f);
+
+            // Tests multiple iterations on same file
+            for (int i = 1; i < 3; i++)
+            {
+                f = AudioFileIO.read(testFile);
+                Tag tag = f.getTag();
+                for (FieldKey key : FieldKey.values())
+                {
+                    if (!(key == FieldKey.COVER_ART) && !(key == FieldKey.ITUNES_GROUPING))
+                    {
+                        System.out.println("Writing:" + key);
+
+                        if(Mp4Tag.getMapping().get(key)==Mp4FieldKey.COMPILATION)
+                        {
+                            tag.setField(tag.createField(key, String.valueOf("1")));
+                        }
+                        else
+                        {
+                            tag.setField(tag.createField(key, String.valueOf(i)));
+                        }
+                    }
+                }
+                f.commit();
+                f = AudioFileIO.read(testFile);
+                tag = f.getTag();
+                for (FieldKey key : FieldKey.values())
+                {
+                    /*
+                     * Test value retrieval, using multiple access methods.
+                     */
+                    if (!(key == FieldKey.COVER_ART) && !(key == FieldKey.ITUNES_GROUPING))
+                    {
+                        System.out.println("Reading:" + key);
+                        String value = String.valueOf(i);
+                        if(Mp4Tag.getMapping().get(key).getSubClassFieldType()==Mp4TagFieldSubType.DISC_NO)
+                        {
+                            value = value +"/" + value;
+                        }
+                        else if(Mp4Tag.getMapping().get(key).getSubClassFieldType()==Mp4TagFieldSubType.TRACK_NO)
+                        {
+                            value = value +"/" + value;
+                        }
+                        else if(Mp4Tag.getMapping().get(key).getSubClassFieldType()==Mp4TagFieldSubType.GENRE)
+                        {
+                            value = GenreTypes.getInstanceOf().getValueForId(Integer.valueOf(value));
+                        }
+                        else if(Mp4Tag.getMapping().get(key)==Mp4FieldKey.COMPILATION)
+                        {
+                            value= "1";
+                        }
+                        //assertEquals(value, tag.getFirst(key));
+                        TagTextField atf =  (TagTextField)tag.getFields(key).get(0);
+                        assertEquals(value, atf.getContent());
+                        atf = (TagTextField) tag.getFields(key).get(0);
+                        assertEquals(value, atf.getContent());
+                    }
+
+                }
+            }
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+            exceptionCaught = e;
+        }
+        assertNull(exceptionCaught);
     }
 }
 
