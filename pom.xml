@@ -68,6 +68,11 @@
       </license>
    </licenses>
    <dependencies>
+	<dependency>
+	    <groupId>com.github.djelad00</groupId>
+	    <artifactId>jaudiotagger</artifactId>
+	    <version>2.2.6-SNAPSHOT</version>
+	</dependency>
       <dependency>
          <groupId>junit</groupId>
          <artifactId>junit</artifactId>
@@ -75,6 +80,14 @@
          <scope>test</scope>
       </dependency>
    </dependencies>
+
+	<repositories>
+		<repository>
+		    <id>jitpack.io</id>
+		    <url>https://jitpack.io</url>
+		</repository>
+	</repositories>
+
    <build>
       <plugins>
          <plugin>
@@ -178,16 +191,4 @@
       <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
       <java.version>1.8</java.version>
    </properties>   
-   <scm>
-      <connection>scm:git:https://bitbucket.org/ijabz/jaudiotagger.git</connection>
-      <developerConnection>scm:git:git@github.com:ijabz/jaudiotagger.git</developerConnection>
-      <url>https://github.com/ijabz/jaudiotagger</url>
-      <tag>jaudiotagger-2.2.6</tag>
-   </scm>
-   <distributionManagement>
-      <repository>
-         <id>bintray</id>
-         <url>https://api.bintray.com/maven/ijabz/maven/jaudiotagger</url>
-      </repository>
-   </distributionManagement>
-</project>
+ </project>
